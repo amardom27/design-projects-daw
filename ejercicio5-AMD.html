@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style>
+        input:invalid {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" aria-label="Formulario de inicio de sesión">
+        <h2>Iniciar sesión</h2>
+
+        <input type="email" name="email" id="email" placeholder="usuario@ejemplo.com" aria-label="Correo electrónico"
+            maxlength="40" pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
+            title="Introduce un email válido (máximo 40 caracteres)" required autofocus>
+
+        <input type="password" name="clave" id="clave" placeholder="Mínimo 8 caracteres" aria-label="Contraseña"
+            minlength="8" pattern=".{8,}" title="La contraseña debe tener al menos 8 caracteres" required>
+
+        <a href="#" aria-label="Enlace para recuperar la contraseña">Recuperar contraseña</a>
+
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</body>
+
+</html>
