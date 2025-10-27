@@ -32,18 +32,18 @@
             display: flex;
             height: 500px;
 
-            flex-flow: column wrap;
+            flex-direction: row;
+            flex-wrap: nowrap;
             /*
+            flex-flow: row wrap;
             flex-direction: row;
             flex-direction: row-reverse;
             flex-direction: column-reverse;
             flex-direction: column-reverse;
             flex-wrap: wrap;
-            flex-wrap: no-wrap;
             flex-wrap: wrap-reverse;
             */
 
-            justify-content: space-around;
             /*
             justify-content: flex-start;
             justify-content: flex-end;
@@ -53,18 +53,15 @@
             justify-content: space-evenly;
             */
 
-            align-items: center;
             /*
             align-items: flex-start;
             align-items: flex-end;
             align-items: center;
-            align-items: strech;
             align-items: baseline;
             */
 
 
             /* Funciona cuando hay varias lineas (wrap y muchos elementos) */
-            align-content: space-evenly;
             /*
             align-content: flex-start;
             align-content: flex-end;
@@ -73,6 +70,37 @@
             align-content: space-around;
             align-content: space-evenly;
             */
+
+            /* Flex grow -> factor de crecimiento de un item cuando tenga espacio disponible */
+        }
+
+        ul.menu>li:nth-child(3) {
+            order: 1;
+        }
+
+        ul.menu>li:nth-child(4) {
+            order: 2;
+        }
+
+        ul.menu>li:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        ul.menu>li:nth-child(7) {
+            order: -1;
+        }
+
+        ul.menu>li:nth-child(8) {
+            align-self: center;
+            order: -2;
+        }
+
+        ul.menu>li:nth-child(2) {
+            flex-grow: 1;
+        }
+
+        ul.menu>li:nth-child(9) {
+            flex-grow: 3;
         }
 
         ul.menu>li {
@@ -91,15 +119,15 @@
         <li><a href="#">Item3</a></li>
         <li><a href="#">Item4</a></li>
 
-        <li><a href="#">Item1</a></li>
-        <li><a href="#">Item2</a></li>
-        <li><a href="#">Item3</a></li>
-        <li><a href="#">Item4</a></li>
+        <li><a href="#">Item5</a></li>
+        <li><a href="#">Item6</a></li>
+        <li><a href="#">Item7</a></li>
+        <li><a href="#">Item8</a></li>
 
-        <li><a href="#">Item1</a></li>
-        <li><a href="#">Item2</a></li>
-        <li><a href="#">Item3</a></li>
-        <li><a href="#">Item4</a></li>
+        <li><a href="#">Item9</a></li>
+        <li><a href="#">Item10</a></li>
+        <li><a href="#">Item11</a></li>
+        <li><a href="#">Item12</a></li>
     </ul>
 </body>
 
