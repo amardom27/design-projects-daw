@@ -29,12 +29,73 @@
         ul.menu {
             background-color: #ACACAC;
             border: 1px solid #FFF;
+            display: flex;
+            height: 500px;
+
+            flex-flow: column wrap;
+            /*
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            flex-wrap: no-wrap;
+            flex-wrap: wrap-reverse;
+            */
+
+            justify-content: space-around;
+            /*
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+            */
+
+            align-items: center;
+            /*
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: strech;
+            align-items: baseline;
+            */
+
+
+            /* Funciona cuando hay varias lineas (wrap y muchos elementos) */
+            align-content: space-evenly;
+            /*
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-between;
+            align-content: space-around;
+            align-content: space-evenly;
+            */
+        }
+
+        ul.menu>li {
+            background-color: #C9830A;
+            margin: 0.62rem;
+            border: 1px solid #FFF;
+            padding: 0.62rem;
         }
     </style>
 </head>
 
 <body>
     <ul class="menu">
+        <li><a href="#">Item1</a></li>
+        <li><a href="#">Item2</a></li>
+        <li><a href="#">Item3</a></li>
+        <li><a href="#">Item4</a></li>
+
+        <li><a href="#">Item1</a></li>
+        <li><a href="#">Item2</a></li>
+        <li><a href="#">Item3</a></li>
+        <li><a href="#">Item4</a></li>
+
         <li><a href="#">Item1</a></li>
         <li><a href="#">Item2</a></li>
         <li><a href="#">Item3</a></li>

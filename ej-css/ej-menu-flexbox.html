@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        ul.menu {
+            width: 100%;
+            background-color: #02b6f5;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        ul.menu>li {
+            color: white;
+            padding: 1rem;
+        }
+
+        ul.menu>li:hover {
+            cursor: pointer;
+            background-color: #0289c2;
+        }
+
+        /* Version tablet */
+        @media (min-width: 640px) {
+            ul.menu {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+
+        /* Version pc */
+        @media (min-width: 1024px) {
+            ul.menu {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Products</li>
+        <li>Contact</li>
+    </ul>
+
+</body>
+
+</html>
