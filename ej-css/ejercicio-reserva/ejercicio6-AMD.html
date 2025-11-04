@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <h1>Silvia Fernandez</h1>
+        </div>
+        <div class="right">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+            </svg>
+            <a href="#">Reservar cita</a>
+        </div>
+    </header>
+
+    <form action="ejercicio6-AMD.html" method="post" aria-label="Formulario de reserva de cita">
+        <h3>Reservar cita</h3>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Laura" required aria-label="Nombre"
+            pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}" title="El nombre debe contener solo letras y al menos 2 caracteres.">
+
+        <label for="apellido">Apellidos</label>
+        <input type="text" name="apellido" id="apellido" placeholder="García Pérez" required aria-label="Apellidos"
+            pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}"
+            title="Los apellidos deben contener solo letras y al menos 2 caracteres.">
+
+        <label for="telefono">Teléfono</label>
+        <div>
+            <select name="bandera" id="bandera" aria-label="Código de país">
+                <option value="ES">🇪🇸</option>
+                <option value="IT">🇮🇹</option>
+                <option value="PT">🇵🇹</option>
+            </select>
+            <input type="tel" name="telefono" id="telefono" placeholder="612345678" required aria-label="Teléfono"
+                pattern="[6-9][0-9]{8}" title="Introduce un número válido de 9 cifras que empiece por 6, 7, 8 o 9.">
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="tuemail@ejemplo.com" required
+            aria-label="Correo electrónico">
+
+        <label for="ptoVenta">Selecciona tu punto de venta</label>
+        <select name="ptoVenta" id="ptoVenta" required aria-label="Punto de venta">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="valencia">Valencia</option>
+        </select>
+
+        <label for="vestido">Tipo de vestido</label>
+        <select name="vestido" id="vestido" required aria-label="Tipo de vestido">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="novia">Vestido de novia</option>
+            <option value="fiesta">Vestido de fiesta</option>
+            <option value="comunion">Vestido de comunión</option>
+        </select>
+
+        <label for="fechaCita">Fecha de cita</label>
+        <input type="date" name="fechaCita" id="fechaCita" required aria-label="Fecha de cita">
+
+        <button type="submit">Reservar</button>
+    </form>
+</body>
+
+</html>

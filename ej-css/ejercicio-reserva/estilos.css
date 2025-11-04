@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    max-width: 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1rem;
+}
+
+header a {
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid black;
+}
