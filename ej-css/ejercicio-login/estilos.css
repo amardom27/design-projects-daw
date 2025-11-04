@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+form h2 {
+    margin-bottom: 0;
+}
+
+form input {
+    min-height: 2rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline-color: orange;
+}
+
+form a {
+    color: black;
+    text-decoration: none;
+}
+
+form button {
+    max-width: 14rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: black;
+    color: orange;
+    font-weight: bold;
+}
