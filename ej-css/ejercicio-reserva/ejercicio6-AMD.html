@@ -31,32 +31,31 @@
         <h3>Reservar cita</h3>
 
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Laura" required aria-label="Nombre"
-            pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}" title="El nombre debe contener solo letras y al menos 2 caracteres.">
+        <input type="text" name="nombre" id="nombre" required aria-label="Nombre" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}"
+            title="El nombre debe contener solo letras y al menos 2 caracteres.">
 
         <label for="apellido">Apellidos</label>
-        <input type="text" name="apellido" id="apellido" placeholder="García Pérez" required aria-label="Apellidos"
+        <input type="text" name="apellido" id="apellido" required aria-label="Apellidos"
             pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]{2,}"
             title="Los apellidos deben contener solo letras y al menos 2 caracteres.">
 
         <label for="telefono">Teléfono</label>
-        <div>
+        <div class="input-tel">
             <select name="bandera" id="bandera" aria-label="Código de país">
                 <option value="ES">🇪🇸</option>
                 <option value="IT">🇮🇹</option>
                 <option value="PT">🇵🇹</option>
             </select>
-            <input type="tel" name="telefono" id="telefono" placeholder="612345678" required aria-label="Teléfono"
-                pattern="[6-9][0-9]{8}" title="Introduce un número válido de 9 cifras que empiece por 6, 7, 8 o 9.">
+            <input type="tel" name="telefono" id="telefono" required aria-label="Teléfono" pattern="[6-9][0-9]{8}"
+                title="Introduce un número válido de 9 cifras que empiece por 6, 7, 8 o 9.">
         </div>
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="tuemail@ejemplo.com" required
-            aria-label="Correo electrónico">
+        <input type="email" name="email" id="email" required aria-label="Correo electrónico">
 
         <label for="ptoVenta">Selecciona tu punto de venta</label>
         <select name="ptoVenta" id="ptoVenta" required aria-label="Punto de venta">
-            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="" disabled selected></option>
             <option value="madrid">Madrid</option>
             <option value="barcelona">Barcelona</option>
             <option value="valencia">Valencia</option>
@@ -64,7 +63,7 @@
 
         <label for="vestido">Tipo de vestido</label>
         <select name="vestido" id="vestido" required aria-label="Tipo de vestido">
-            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="" disabled selected></option>
             <option value="novia">Vestido de novia</option>
             <option value="fiesta">Vestido de fiesta</option>
             <option value="comunion">Vestido de comunión</option>

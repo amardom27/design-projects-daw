@@ -9,12 +9,32 @@ svg {
 header {
     display: flex;
     justify-content: space-between;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 header div {
     display: flex;
     align-items: center;
 }
+
+header div.left,
+header div.right {
+    flex-grow: 1;
+    display: flex;
+}
+
+header div.left {
+    justify-content: flex-start;
+    column-gap: .5rem;
+}
+
+
+header div.right {
+    justify-content: flex-end;
+    column-gap: .5rem;
+}
+
 
 header h1 {
     font-size: 1rem;
@@ -24,4 +44,53 @@ header a {
     font-size: 1rem;
     text-decoration: none;
     border: 1px solid black;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+form h3 {
+    text-align: center;
+}
+
+form input,
+form select {
+    height: 2rem;
+}
+
+form select {
+    background-color: white;
+    border: 1px solid black;
+}
+
+form button {
+    align-self: center;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.input-tel {
+    border: 1px solid black;
+    display: flex;
+    column-gap: .5rem;
+    padding-inline: .5rem;
+}
+
+.input-tel select,
+.input-tel input {
+    border: none;
+}
+
+.input-tel input {
+    flex-grow: 1;
 }
