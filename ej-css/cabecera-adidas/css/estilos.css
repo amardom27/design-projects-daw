@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header svg {
+    fill: black;
+}
+
+#addidas {
+    max-width: 3rem;
+    flex-grow: 1;
+    margin: 0 auto;
+    flex: 1;
+}
+
+#corazon {
+    order: -1;
+}
+
+header>p {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header>p span:first-child {
+    display: none;
+}
+
+header>div:nth-child(2) {
+    margin-block: .6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-block: .6rem;
+}
+
+header>div:nth-child(2)>svg:nth-child(1) {
+    max-width: 3.2rem;
+    margin: 0 auto;
+    flex: 1;
+}
+
+header>div:nth-child(2) nav#main-menu {
+    order: -2;
+}
+
+header>div:nth-child(2) nav#main-menu ul,
+header>div:nth-child(2) nav#main-menu input {
+    display: none;
+}
+
+header>div:nth-child(2) nav#main-menu label span {
+    font-size: 1.4rem;
+}
+
+header>div:nth-child(2) div#buscador {
+    display: flex;
+    align-items: center;
+    padding-inline: .4rem;
+}
+
+header>div:nth-child(2) div#buscador input {
+    border: none;
+    display: none;
+}
+
+header>div:nth-child(3) {
+    background-color: #edeff1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block: .6rem;
+}
+
+
+header>div:nth-child(3) p {
+    max-width: 20rem;
+    margin: 0 auto;
+    flex: 1;
+}
+
+header>div:nth-child(3) p a {
+    color: black;
+}
+
+/* lg */
+@media (min-width: 64rem) {
+    header div:nth-child(2) div#buscador {
+        border: 1px solid black;
+    }
+}
