@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Ocultar checkbox */
+#hamburger {
+    display: none;
+}
+
+/* Estilos del ícono hamburguesa */
+.menu-toggle {
+    width: 2.4rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: black;
+    padding: 0.2rem;
+}
+
+.menu-toggle .line {
+    height: 4px;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s;
+}
