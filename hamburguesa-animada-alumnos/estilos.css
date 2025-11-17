@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+label#hamburger {
+    position: relative;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    background: #ff9700;
+}
+
+label#hamburger>input#flag {
+    display: none;
+}
+
+label#hamburger>span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 3em;
+    height: .4em;
+    margin: auto;
+    background: #fff;
+
+    transition: background-color 1s 1s;
+}
+
+label#hamburger>span:before,
+label#hamburger>span:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    content: '';
+    background: #fff;
+
+    transition: top 1s 1s, bottom 1s 1s, transform 1s 0s;
+}
+
+label#hamburger:has(input:checked)>span:before,
+label#hamburger:has(input:checked)>span:after {
+    transition: top 1s 0s, bottom 1s 0s, transform 1s 1s;
+}
+
+label#hamburger>span:before {
+    top: -1rem;
+}
+
+label#hamburger>span:after {
+    bottom: -1rem;
+}
+
+label#hamburger:has(input:checked)>span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+label#hamburger:has(input:checked)>span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+label#hamburger:has(input:checked)>span {
+    transition: background-color 0s 1s;
+
+    background-color: #ff9700;
+}
