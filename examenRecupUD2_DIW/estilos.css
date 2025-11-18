@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+aside {
+    display: none;
+}
+
+
+header {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul#menu {
+    display: none;
+}
+
+input#menu-hamburger {
+    display: none;
+}
+
+header div {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.6rem;
+    padding-inline: 1rem;
+    background-color: lightgray;
+}
+
+header img {
+    padding-block: 1rem;
+}
+
+header div input {
+    width: 14rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-block: 1rem;
+    padding-inline: .6rem;
+}
+
+header div input:focus {
+    outline: 1px solid black;
+}
+
+header div:has(input:focus) label,
+header div:has(input:not(:placeholder-shown)) label,
+header div:has(input:focus) span,
+header div:has(input:not(:placeholder-shown)) span {
+    visibility: hidden;
+}
+
+header div input::placeholder {
+    color: transparent;
+}
+
+header div label {
+    transform: translateX(9rem);
+    color: grey;
+}
+
+header div span {
+    transform: translateX(-11rem);
+    color: grey;
+}
+
+
+header nav#menu-principal {
+    order: -1;
+}
+
+header nav#menu-principal label span {
+    display: inline-block;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+header nav#bloqueiconos ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 1rem;
+}
+
+header nav#bloqueiconos ul li:not(:last-child) {
+    display: none;
+}
+
+header nav#bloqueiconos ul li i {
+    font-size: 1.4rem;
+    color: grey;
+}
+
+main {
+    padding-block: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main article {
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+main article a:has(h3) {
+    font-size: .8rem;
+    color: gray;
+    text-decoration: none;
+    text-align: center;
+}
+
+main article p {
+    font-weight: bold;
+    color: gray;
+}
+
+main article a:has(picture) {
+    order: -1;
+}
+
+main article a picture img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    flex-basis: 100%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+footer nav#madicional ul {
+    flex-direction: column;
+    gap: .6rem;
+}
+
+
+footer nav#menu-social ul {
+    gap: 1rem;
+}
+
+footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer ul li:has(i) {
+    font-size: 1.4rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+    header nav#bloqueiconos ul li:not(:last-child) {
+        display: block;
+    }
+}
+
+@media (min-width: 1300px) {
+    ul#menu {
+        display: block;
+    }
+
+    header picture {
+        flex-basis: 100%;
+        order: 0;
+        text-align: center;
+    }
+
+    header nav#menu-principal label span {
+        display: none;
+    }
+
+    header div label {
+        display: block;
+        margin-right: 0.2rem;
+        color: gray;
+    }
+
+    header div input::placeholder {
+        color: transparent;
+    }
+
+    header div {
+        flex: 0 0 auto;
+        order: 1;
+        background-color: transparent;
+    }
+
+    header nav#menu-principal {
+        order: 3;
+        flex: 1 1 auto;
+    }
+
+    header nav#bloqueiconos {
+        order: 4;
+    }
+
+    header nav#menu-principal ul {
+        margin: 0 auto;
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding-inline: 1rem;
+    }
+
+    header nav#menu-principal ul li a {
+        text-decoration: none;
+        color: gray;
+    }
+
+    main {
+        flex-basis: 60%;
+    }
+
+    aside {
+        display: block;
+        padding-top: 1rem;
+        flex-basis: 20%;
+    }
+
+    aside nav#menu-secundario ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3rem;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    aside nav#menu-secundario ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    aside nav#menu-secundario ul li a {
+        color: grey;
+        text-decoration: none;
+    }
+
+    aside nav#menu-secundario>ul>li>a {
+        font-weight: bold;
+    }
+
+    aside nav#menu-secundario ul li ul {
+        padding-left: 0;
+    }
+
+    header div input {
+        width: 12rem;
+        margin-inline: 6px;
+    }
+
+    header div label {
+        transform: translateX(0);
+        color: grey;
+    }
+
+    header div span {
+        transform: translateX(0);
+        color: grey;
+    }
+}

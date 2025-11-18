@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title> DIW Massimo Dutti</title>
+	<meta charset="utf-8">
+	<meta content="Escribe tu nombre y apellidos" name="author" />
+	<meta content="Examen Diseño de Interfaces Web" name="description" />
+	<meta content="examen, diw, massimo dutti, diseño web, responsive web design" name="keywords" />
+	<meta name="robots" content="index, follow" />
+	<meta name="lang" content="es-ES" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+	<header>
+		<picture>
+			<img id="logo" src="logo.png" alt="Logo Massimo Dutti">
+		</picture>
+		<!-- Menú principal -->
+		<nav id="menu-principal">
+			<label for="menu-hamburger">
+				<span>&#9776;</span>
+			</label>
+			<input type="checkbox" id="menu-hamburger" /> <!--Para la hamburguesa-->
+			<ul id="menu">
+				<li><a href="#">REBAJAS</a>
+				<li><a href="#">NUEVO</a>
+				<li><a href="#">MUJER</a>
+				<li><a href="#">HOMBRE</a>
+				<li><a href="#">NIÑOS</a>
+				<li><a href="#">PERSONAL TAILORIN</a>
+				<li><a href="#">EDITORIAL</a>
+				<li><a href="#">TRENDS ALERT</a>
+			</ul>
+		</nav>
+		<!--Bloque de enlaces con iconos -->
+		<nav id="bloqueiconos">
+			<ul>
+				<li><a href="#" aria-label="f"><i class="fa fa-truck"></i></a>
+				<li><a href="#" aria-label="ususario"><i class="fa fa-user"></i></a>
+				<li><a href="#" aria-label="carrito"><i class="fa fa-shopping-bag"></i></a>
+			</ul>
+		</nav>
+		<div>
+			<label for="buscar">BUSCAR </label>
+			<input type="text" id="buscar" placeholder="Buscar" />
+			<span class="fa fa-search"></span>
+		</div>
+	</header>
+	<aside>
+		<!--Menú secundario lateral -->
+		<nav id="menu-secundario">
+			<ul>
+				<li><a href="#">NUEVO</a>
+				<li><a href="#">HOMBRE</a>
+					<ul>
+						<li><a href="#">Cazadora de piel</a>
+						<li><a href="#">Americanas</a>
+						<li><a href="#">Trajes</a>
+						<li><a href="#">Jerséis y Cardigans</a>
+						<li><a href="#">Pantalones</a>
+					</ul>
+				<li><a href="#">ACCESORIOS</a>
+					<ul>
+						<li><a href="#">Zapatos</a>
+						<li><a href="#">Relojes y gafas</a>
+						<li><a href="#">Corbatas</a>
+						<li><a href="#">Bufandas</a>
+						<li><a href="#">Homewear</a>
+					</ul>
+				<li><a href="#">PERSONAL TAILORING</a>
+			</ul>
+		</nav>
+	</aside>
+	<!--Contenido principal con los productos -->
+	<main>
+		<article class="item">
+			<a href="#">
+				<h3>CAZADORA CON GRABADO ESTILO BIKER</h3>
+			</a>
+			<p> 229,00€</p>
+			<a href="#">
+				<picture><img src="cazadoraNapaBiker.jpg" alt="Cazadora Napa Biker" width="560" height="746"></picture>
+			</a>
+		</article>
+		<article class="item">
+			<a href="#">
+				<h3>GABARDINA MARINO TÉCNICA REVERSIBLE</h3>
+			</a>
+			<p> 196,00€</p>
+			<a href="#">
+				<picture><img src="cazadoraNapaBiker.jpg" alt="Gabardina Marino Técnica" width="560" height="746">
+				</picture>
+			</a>
+		</article>
+		<article class="item">
+			<a href="#">
+				<h3>CAZADORA NAPA MICRO PERFORADA REVERSIBLE</h3>
+			</a>
+			<p> 229,00€</p>
+			<a href="#">
+				<picture><img src="cazadoraNapaReversible.jpg" alt="Cazadora Napa Reversible" width="560" height="746">
+				</picture>
+			</a>
+		</article>
+		<article class="item">
+			<a href="#">
+				<h3>CAZADORA PLUMAS SUPER LIGHT CON CAPUCHA</h3>
+			</a>
+			<p> 15,95€</p>
+			<a href="#">
+				<picture><img src="cazadoraNapaReversible.jpg" alt="Cazadora Plumas Capucha" width="560" height="746">
+				</picture>
+			</a>
+		</article>
+		<article class="item">
+			<a href="#">
+				<h3>CHALECO NAPA MICRO PERFORADO REVERSIBLE</h3>
+			</a>
+			<p> 35,95€</p>
+			<a href="#">
+				<picture><img src="chalecoNegro.jpg" alt="Chaleco Napa Reversible" width="560" height="746"></picture>
+			</a>
+		</article>
+	</main>
+	<!--Pie de página con un menú adicional y menú social -->
+	<footer>
+		<nav id="madicional">
+			<ul>
+				<li><a href="#">NEWSLETTER</a></li>
+				<li><a href="#">EMPRESAS</a></li>
+				<li><a href="#">CONTACTO</a></li>
+				<li><a href="#">TARJETA REGALO</a></li>
+			</ul>
+		</nav>
+		<nav id="menu-social">
+			<ul>
+				<li><a href="#" aria-label="facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#" aria-label="twitter"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#" aria-label="youtube"><i class="fa fa-youtube-play"></i></a></li>
+				<li><a href="#" aria-label="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+				<li><a href="#" aria-label="instagram"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+
+</html>
