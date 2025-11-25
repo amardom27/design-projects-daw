@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title> Formulario de contacto Desigual</title>
+	<meta charset="utf-8">
+	<meta content="Escribe tu nombre y apellidos" name="author">
+	<meta content="Formulario de contacto web Desigual" name="description">
+	<meta content="examen, apliweb, desigual, diseño web, responsive web design" name="keywords">
+	<meta name="robots" content="index, follow">
+	<meta name="lang" content="es-ES">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="estilos-form.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+	<main>
+		<h2>Dinos cosas bonitas</h2>
+		<form id="contacto">
+			<div>
+				<input type="text" id="nombre" name="nombre" title="Inserte su nombre y apellido/s" autofocus
+					pattern="^[A-Za-z]*$" required placeholder=" " />
+				<label class="lbl">
+					<span class="texto">
+						Nombre
+					</span>
+				</label>
+			</div>
+
+			<div>
+				<input type="text" name="email" title="Introduzca su correo electrónico"
+					pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$" required placeholder=" " />
+				<label class="lbl">
+					<span class="texto">
+						Email
+					</span>
+				</label>
+			</div>
+
+			<div>
+				<input type="text" name="telefno" title="Introduzca su número de móvil" pattern="^\d{9}$" required
+					placeholder=" " />
+				<label class="lbl">
+					<span class="texto">
+						Teléfono
+					</span>
+				</label>
+			</div>
+
+			<div>
+				<input type="text" name="asunto" title="Introduzca el asunto de su mensaje" required placeholder=" " />
+				<label class="lbl">
+					<span class=texto>
+						Asunto
+					</span>
+				</label>
+			</div>
+
+			<input class="boton" type="button" value="Enviar" name="enviar">
+		</form>
+	</main>
+</body>
+
+</html>
