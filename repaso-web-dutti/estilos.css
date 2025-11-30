@@ -128,9 +128,44 @@ main article a:has(picture) {
     order: -1;
 }
 
+footer {
+    background-color: lightgray;
+    padding-block: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer nav ul li a:has(i) {
+    font-size: 1.4rem;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer nav#menu-social ul {
+    display: flex;
+    gap: 1rem;
+}
+
 @media (min-width: 800px) {
     header nav#bloqueiconos ul li:not(:last-child) {
         display: block;
+    }
+
+    footer {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
     }
 }
 
