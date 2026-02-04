@@ -1,0 +1,234 @@
+:root {
+    /* Paleta de colores */
+    --bg-color: #222831;
+    --primary: #00ADB5;
+    --secondary: #EEEEEE;
+    --base: #393E46;
+
+    /* Colores derivados y estados */
+    --bg-gradient: radial-gradient(circle at center, #2c3440 0%, var(--bg-color) 100%);
+    --glass-bg: rgba(57, 62, 70, 0.4);
+    --glass-border: rgba(238, 238, 238, 0.1);
+    --primary-glow: rgba(0, 173, 181, 0.4);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    /* Medidas y efectos */
+    --dimensions: 3.5rem;
+    --border-radius-full: 50%;
+    --border-radius-pill: 50px;
+    --blur-intensity: 12px;
+    --border-width: 2px;
+
+    /* Animaciones */
+    --transition-speed: 0.3s;
+    --transition-curve: cubic-bezier(0.4, 0, 0.2, 1);
+    --active-scale: 0.95;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-pill);
+    box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+.botones-contenedor {
+    flex: 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Contenedores con Efecto Glassmorphism */
+#btnPlay,
+#btnVolume {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* Estilización Universal de Botones */
+button {
+    width: var(--dimensions);
+    height: var(--dimensions);
+    border-radius: var(--border-radius-full);
+    border: var(--border-width) solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--base);
+    color: var(--secondary);
+    transition: all var(--transition-speed) var(--transition-curve);
+    outline: none;
+    position: relative;
+}
+
+/* Botón de Acción Principal (Play/Pause) */
+#reproducir,
+#parar {
+    background: var(--primary);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-glow);
+    border: none;
+}
+
+#reproducir:hover,
+#parar:hover {
+    box-shadow: 0 0 25px var(--primary);
+}
+
+/* Botones Secundarios (Restart y Volumen) */
+#restart,
+#volume-down,
+#volume-up {
+    background: transparent;
+    border-color: var(--base);
+}
+
+#restart:hover,
+#volume-down:hover,
+#volume-up:hover {
+    background: var(--base);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Feedback de click */
+button:active {
+    transform: scale(var(--active-scale)) !important;
+}
+
+/* Control de iconos SVG */
+svg {
+    width: calc(var(--dimensions) * 0.45);
+    height: calc(var(--dimensions) * 0.45);
+    fill: none;
+}
+
+/* Ajuste específico para iconos rellenos */
+.icons-tabler-filled {
+    fill: currentColor;
+}
+
+/* Lógica de Alternancia de Estado */
+#btnPlay.fa-play button#parar,
+#btnPlay.fa-pause button#reproducir {
+    display: none;
+}
+
+/* Contenedor de la barra de progreso */
+.contenedor {
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-bottom: 1rem;
+}
+
+/* Barra total */
+#barra {
+    width: 100%;
+    height: .6rem;
+    background-color: var(--bg-color);
+    border-radius: .6rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Barra progreso */
+#progreso {
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: .6rem;
+    transition: width 0.1s linear;
+}
+
+/* Tiempo de la canción */
+.tiempos {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    color: var(--secondary);
+    letter-spacing: .5px;
+}
+
+
+#barra.playing {
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 6px var(--primary-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 14px var(--primary), 0 0 25px var(--primary-glow);
+    }
+
+    100% {
+        box-shadow: 0 0 6px var(--primary-glow);
+    }
+}
+
+#vinilo {
+    margin: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vinilo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: girar 8s linear infinite;
+    animation-play-state: paused;
+}
+
+#vinilo.playing img {
+    animation-play-state: running;
+}
+
+#vinilo.playing {
+    box-shadow:
+        0 0 15px var(--primary-glow),
+        0 0 30px var(--primary);
+}
+
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

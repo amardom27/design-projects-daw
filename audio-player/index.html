@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="audio">
+        <source src="hotel-california.m4a" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+    <div class="app">
+        <div id="vinilo">
+            <img src="vinilo-hotel-california.png" alt="">
+        </div>
+
+        <!-- Barra -->
+        <div class="contenedor">
+            <div id="barra">
+                <div id="progreso"></div>
+            </div>
+
+            <div class="tiempos">
+                <span id="tiempo-actual">0:00</span>
+                <span id="tiempo-total">0:00</span>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="botones-contenedor">
+            <div id="btnPlay" class="fa-play">
+                <button id="reproducir" title="Reproducir">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                    </svg>
+                </button>
+
+                <button id="parar" title="Parar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-pause">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
+                        <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
+                    </svg>
+                </button>
+
+                <button id="restart" title="Reiniciar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-restore">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3.06 13a9 9 0 1 0 .49 -4.087" />
+                        <path d="M3 4.001v5h5" />
+                        <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="btnVolume">
+                <button id="volume-down" title="Menos Volumen">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-volume-2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 8a5 5 0 0 1 0 8" />
+                        <path
+                            d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+                    </svg>
+                </button>
+
+                <button id="volume-up" title="Más Volumen">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-volume">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 8a5 5 0 0 1 0 8" />
+                        <path d="M17.7 5a9 9 0 0 1 0 14" />
+                        <path
+                            d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="funciones-reproductor-audio.js"></script>
+</body>
+
+</html>
