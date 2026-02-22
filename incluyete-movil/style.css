@@ -145,17 +145,17 @@ header div.first-row .logo-cont {
 }
 
 /* Segunda fila */
-header div.second-row {
+header form {
     display: flex;
     border: 1px solid var(--dark-gray);
     border-radius: .4rem;
 }
 
-header div.second-row:has(input:focus) {
+header form:has(input:focus) {
     border-color: var(--secondary);
 }
 
-header div.second-row input {
+header form input {
     display: inline-block;
     flex-basis: 80%;
     padding: .6rem .4rem;
@@ -163,7 +163,7 @@ header div.second-row input {
     border: none;
 }
 
-header div.second-row button.search-btn {
+header form button.search-btn {
     background-color: var(--secondary);
     flex-basis: 20%;
     position: relative;
@@ -253,45 +253,48 @@ header div.second-row button.search-btn {
     gap: 2rem;
 }
 
-#categories div.categ-cont {
+#categories ul.categ-cont {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    list-style: none;
 }
 
-#categories div.categ-cont a {
-    flex-basis: calc(50% - 1rem);
-}
-
-#categories div.categ-cont a {
+#categories ul.categ-cont li {
     outline: 1px solid var(--dark-gray);
+    flex-basis: calc(50% - 1rem);
+    cursor: pointer;
+    border-radius: .4rem;
+    padding: 1.6rem .4rem;
+    font-size: .9rem;
+}
+
+#categories ul.categ-cont li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.6rem 1rem;
-    border-radius: .4rem;
-    gap: 1rem;
-    cursor: pointer;
+    gap: .8rem;
 }
 
-#categories div.categ-cont a:hover {
+#categories ul.categ-cont li:hover {
     outline-color: var(--secondary);
     color: var(--secondary);
 }
 
 
-#categories div.categ-cont a:hover svg {
+#categories ul.categ-cont li:hover svg {
     stroke: var(--secondary);
 }
 
-#categories div.categ-cont a svg {
+#categories ul.categ-cont li svg {
     width: 2rem;
     height: 2rem;
     stroke: black;
+    stroke-width: 2;
 }
 
-#categories div.categ-cont a p {
+#categories ul.categ-cont li p {
     text-align: center;
 }
 
@@ -310,14 +313,14 @@ header div.second-row button.search-btn {
     text-align: center;
 }
 
-#newsletter div {
+#newsletter form {
     width: 100%;
     display: flex;
     border: 1px solid var(--dark-gray);
     border-radius: .4rem;
 }
 
-#newsletter div input {
+#newsletter form input {
     display: inline-block;
     flex-basis: 80%;
     padding: .6rem .4rem;
@@ -325,7 +328,7 @@ header div.second-row button.search-btn {
     border: none;
 }
 
-#newsletter div button {
+#newsletter form button {
     background-color: var(--secondary);
     flex-basis: 20%;
     position: relative;
