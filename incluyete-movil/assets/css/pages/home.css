@@ -1,177 +1,4 @@
-@font-face {
-    font-family: "Montserrat";
-    src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format('truetype-variations');
-    font-weight: 400 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Open Sans";
-    src: url("./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format('truetype-variations');
-    font-weight: 400 700;
-    font-display: swap;
-}
-
-:root {
-    --primary: #045284;
-    --secondary: #bf5900;
-    --secondary-bright: #ff7700;
-    --text: #000;
-    --bg-color: #fff;
-    --dark-gray: #595959;
-    --light-gray: #f3f3f3;
-    --error: #ff3333;
-    --success: #16a34a;
-
-    --montserrat: "Montserrat", sans-serif;
-    --opensans: "Open Sans", sans-serif;
-
-    --pad: 1rem;
-}
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--opensans);
-}
-
-/* Iconos */
-#logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.08);
-}
-
-#burguer {
-    stroke: var(--primary);
-    cursor: pointer;
-}
-
-#lupa {
-    stroke: var(--bg-color);
-    fill: transparent;
-}
-
-/* Predefinidos */
-.btn-style-1 {
-    background: none;
-    color: var(--primary);
-    cursor: pointer;
-    border: none;
-    font-size: .9rem;
-    font-weight: 600;
-}
-
-.btn-style-1:hover {
-    text-decoration: underline;
-    color: var(--secondary);
-}
-
-.btn-style-2 {
-    background-color: var(--primary);
-    color: var(--bg-color);
-    padding: .6rem;
-    border-radius: .4rem;
-    border: none;
-    cursor: pointer;
-    font-size: .9rem;
-    font-weight: 600;
-}
-
-.btn-style-2:hover {
-    background-color: var(--secondary);
-}
-
-.btn-style-3 {
-    width: calc(100% - 1.6rem);
-    background-color: var(--primary);
-    color: var(--bg-color);
-    padding: .8rem 5rem;
-    border-radius: .4rem;
-    border: none;
-    cursor: pointer;
-    font-size: .9rem;
-    font-weight: 600;
-}
-
-.btn-style-3:hover {
-    background-color: var(--secondary);
-}
-
-/* Globales */
-.pos-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-a {
-    text-decoration: none;
-}
-
-.transition {
-    transition: all .2s ease-in-out;
-}
-
-/* Header */
-header {
-    padding: var(--pad);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-header div.first-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header div.first-row .logo-cont {
-    display: block;
-    width: 6rem;
-    height: 4rem;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Segunda fila */
-header form {
-    display: flex;
-    border: 1px solid var(--dark-gray);
-    border-radius: .4rem;
-}
-
-header form:has(input:focus) {
-    border-color: var(--secondary);
-}
-
-header form input {
-    display: inline-block;
-    flex-basis: 80%;
-    padding: .6rem .4rem;
-    border-radius: .4rem 0 0 .4rem;
-    border: none;
-}
-
-header form button.search-btn {
-    background-color: var(--secondary);
-    flex-basis: 20%;
-    position: relative;
-    border-radius: 0 .4rem .4rem 0;
-    border: none;
-    cursor: pointer;
-}
-
-/* Seccion Bienvenida */
+/* Sección Bienvenida */
 #welcome {
     padding-top: .8rem;
     padding-bottom: 1rem;
@@ -214,10 +41,10 @@ header form button.search-btn {
 }
 
 #welcome>p {
-    padding: 0 var(--pad);
+    padding: 0 var(--space-4);
 }
 
-/* Por que buscar aqui */
+/* Por qué buscar aquí */
 #why-here {
     display: flex;
     flex-direction: column;
@@ -225,7 +52,7 @@ header form button.search-btn {
     gap: 2rem;
     color: var(--bg-color);
     background-color: var(--primary);
-    padding: 2rem var(--pad);
+    padding: 2rem var(--space-4);
 }
 
 #why-here div {
@@ -245,7 +72,7 @@ header form button.search-btn {
 
 /* Explora categorías */
 #categories {
-    padding: 2rem var(--pad);
+    padding: 2rem var(--space-4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,7 +108,6 @@ header form button.search-btn {
     color: var(--secondary);
 }
 
-
 #categories ul.categ-cont li:hover svg {
     stroke: var(--secondary);
 }
@@ -303,7 +129,7 @@ header form button.search-btn {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    padding: 2rem var(--pad);
+    padding: 2rem var(--space-4);
     background-color: var(--primary);
     color: var(--bg-color);
 }
@@ -336,35 +162,4 @@ header form button.search-btn {
     cursor: pointer;
     color: var(--bg-color);
     padding: .4rem;
-}
-
-/* Pie */
-footer {
-    background-color: var(--light-gray);
-    display: flex;
-    flex-direction: column;
-    padding: 2rem var(--pad) 1rem;
-    gap: 1rem;
-}
-
-footer nav {
-    display: flex;
-    flex-direction: column;
-    gap: .4rem;
-}
-
-footer a {
-    color: var(--text);
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer div {
-    font-size: small;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .8rem;
 }

@@ -1,0 +1,56 @@
+/* Iconos Genéricos */
+#burguer {
+    stroke: var(--primary);
+    cursor: pointer;
+}
+
+#lupa {
+    stroke: var(--bg-color);
+    fill: transparent;
+}
+
+/* Botones Predefinidos */
+.btn-style-1 {
+    background: none;
+    color: var(--primary);
+    cursor: pointer;
+    border: none;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-style-1:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+.btn-style-2 {
+    background-color: var(--primary);
+    color: var(--bg-color);
+    padding: .6rem;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-style-2:hover {
+    background-color: var(--secondary);
+}
+
+.btn-style-3 {
+    width: calc(100% - 1.6rem);
+    background-color: var(--primary);
+    color: var(--bg-color);
+    padding: .8rem 5rem;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-style-3:hover {
+    background-color: var(--secondary);
+}
