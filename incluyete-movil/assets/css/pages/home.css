@@ -129,7 +129,6 @@ header {
     gap: 1rem;
 }
 
-/* Primera fila */
 header div.first-row {
     display: flex;
     align-items: center;
