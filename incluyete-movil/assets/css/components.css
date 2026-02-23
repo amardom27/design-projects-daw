@@ -54,3 +54,134 @@
 .btn-style-3:hover {
     background-color: var(--secondary);
 }
+
+/* Carta de lugar (lugares) */
+.card {
+    padding: .4rem;
+}
+
+.card a {
+    outline: 2px solid var(--mid-gray);
+    border-radius: .4rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    flex: 1 1 auto;
+    max-width: 30rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card a:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    outline-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.card a img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: .4rem .4rem 0 0;
+}
+
+.card a h2 {
+    font-size: medium;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-categ {
+    position: absolute;
+    top: .4rem;
+    right: .4rem;
+}
+
+/* Bolas de categorías */
+.bubble-categ-1 {
+    background-color: var(--light-gray);
+    color: var(--text);
+    border-radius: 3rem;
+    font-size: small;
+    padding: .2rem 1rem;
+}
+
+.bubble-categ-2 {
+    background-color: var(--text);
+    color: var(--bg-color);
+    border-radius: 3rem;
+    font-size: small;
+    padding: .2rem 1rem;
+}
+
+/* Hero (primera seccion) de lugares/[id] */
+.hero-lugar {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-lugar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-lugar div.hero-title {
+    position: absolute;
+    z-index: 2;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.hero-lugar div.hero-title h1 {
+    margin-bottom: 1rem;
+    color: var(--bg-color);
+}
+
+.hero-lugar div.hero-title div {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Título con borde debajo */
+.title-1 {
+    border-bottom: 1px solid var(--dark-gray);
+    padding-bottom: .2rem;
+    margin-bottom: 1rem;
+}
+
+/* Imágenes de la galería (lugares/[id]) */
+.img-box {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .4rem;
+}

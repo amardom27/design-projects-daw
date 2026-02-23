@@ -86,3 +86,12 @@ footer div.copyright {
     align-items: center;
     gap: .8rem;
 }
+
+/* Seccion */
+.container {
+    padding: 2rem 1rem 2rem;
+}
+
+.container-first {
+    padding: 1rem 1rem 2rem;
+}

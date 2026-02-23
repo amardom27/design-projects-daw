@@ -19,6 +19,7 @@
     --text: #000;
     --bg-color: #fff;
     --dark-gray: #595959;
+    --mid-gray: #e4e4e4;
     --light-gray: #f3f3f3;
     --error: #ff3333;
     --success: #16a34a;
@@ -237,6 +238,10 @@ button {
 
 .gap-8 {
     gap: var(--space-8);
+}
+
+.gap-12 {
+    gap: var(--space-12);
 }
 
 /* --- MARGINS --- */
@@ -684,22 +689,52 @@ button {
 
 .text-xs {
     font-size: 0.75rem;
+    line-height: 1rem;
 }
 
 .text-sm {
     font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
 .text-base {
     font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .text-lg {
     font-size: 1.125rem;
+    line-height: 1.75rem;
 }
 
 .text-xl {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
 }
 
 .text-center {
@@ -737,6 +772,10 @@ button {
 
 .bg-light-gray {
     background-color: var(--light-gray);
+}
+
+.bg-mid-gray {
+    background-color: var(--mid-gray);
 }
 
 /* --- BORDERS & RADIUS --- */
