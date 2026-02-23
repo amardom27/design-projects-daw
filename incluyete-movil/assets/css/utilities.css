@@ -865,6 +865,27 @@ button {
     overflow-x: auto;
 }
 
+/* --- ASPECT RATIOS --- */
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-portrait {
+    aspect-ratio: 3 / 4;
+}
+
+.aspect-landscape {
+    aspect-ratio: 4 / 3;
+}
+
+.aspect-photo {
+    aspect-ratio: 3 / 2;
+}
+
 .object-cover {
     object-fit: cover;
 }
