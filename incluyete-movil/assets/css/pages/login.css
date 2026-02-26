@@ -1,0 +1,10 @@
+.logo-cont {
+    height: 8rem;
+    text-align: center;
+}
+
+.logo-cont img {
+    max-width: 70%;
+    object-position: center;
+    object-fit: cover;
+}

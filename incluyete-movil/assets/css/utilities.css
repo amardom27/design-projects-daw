@@ -833,6 +833,18 @@ button {
     min-height: 100vh;
 }
 
+.w-80 {
+    width: 80%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.h-20 {
+    height: 10rem;
+}
+
 /* --- INTERACTIVITY --- */
 .cursor-pointer {
     cursor: pointer;
