@@ -9,17 +9,91 @@
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-        class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-        class="icon icon-tabler icons-tabler-filled icon-tabler-player-pause">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
-        <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
-    </svg>
+    <main class="player-container">
+        <video id="video" poster="trailer.png">
+            <source src="videos/trailer.webm" type="video/webm">
+            <source src="videos/trailer.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+
+        <div class="controls-wrapper">
+            <div class="progress-section">
+                <input type="range" id="barraTiempo" value="0" min="0" max="100" step="0.1">
+                <span id="tiempo">0:00 / 0:00</span>
+            </div>
+
+            <div class="buttons-section">
+                <div class="group">
+                    <button id="atras" title="Atras 5s">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" />
+                            <path
+                                d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" />
+                        </svg>
+                    </button>
+
+                    <button id="reproducir" title="Play/Pausa">
+                        <div id="btnPlay" class="fa-play">
+                            <svg class="play-svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                            </svg>
+                            <svg class="pause-svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
+                                <path
+                                    d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <button id="parar" title="Parar">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 4h-10a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3 -3v-10a3 3 0 0 0 -3 -3z" />
+                        </svg>
+                    </button>
+
+                    <button id="adelante" title="Adelante 5s">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M2 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" />
+                            <path
+                                d="M13 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="group volume-ctrl">
+                    <button id="mute">
+                        <div id="btnMute" class="fa-volume-up">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 8a5 5 0 0 1 0 8" />
+                                <path d="M17.7 5a9 9 0 0 1 0 14" />
+                                <path
+                                    d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+                            </svg>
+                        </div>
+                    </button>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                </div>
+
+                <div class="group">
+                    <button id="lento">0.5x</button>
+                    <button id="restart" title="Reiniciar">↺</button>
+                    <button id="rapido">2x</button>
+                </div>
+
+                <button id="fullscreen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
     <script src="funciones-reproductor.js"></script>
 </body>
 

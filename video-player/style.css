@@ -1,0 +1,163 @@
+:root {
+    --primary: #045284;
+    --secondary: #bf5900;
+    --secondary-bright: #ff7700;
+    --text: #000;
+    --bg-color: #fff;
+    --dark-gray: #595959;
+    --mid-gray: #e4e4e4;
+    --light-gray: #f3f3f3;
+    --error: #ff3333;
+    --success: #16a34a;
+    --white-trans: rgba(255, 255, 255, 0.95);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--mid-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Contenedor Principal --- */
+.player-container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--dark-gray);
+}
+
+video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+}
+
+/* --- Panel de Controles --- */
+.controls-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white-trans);
+    padding: 10px 15px;
+    border-top: 2px solid var(--primary);
+}
+
+/* --- Barra de Progreso --- */
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+#barraTiempo {
+    flex: 1;
+    cursor: pointer;
+    accent-color: var(--secondary-bright);
+    height: 6px;
+}
+
+#tiempo {
+    color: var(--dark-gray);
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* --- Botones y Secciones --- */
+.buttons-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--light-gray);
+    color: var(--secondary);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+/* Lógica de visibilidad Play/Pausa (compatible con tu JS) */
+.pause-svg,
+.fa-pause .play-svg {
+    display: none;
+}
+
+.fa-pause .pause-svg {
+    display: block;
+}
+
+/* --- Grupo de Volumen --- */
+.volume-ctrl {
+    border-left: 1px solid var(--mid-gray);
+    padding-left: 10px;
+}
+
+#volume {
+    width: 80px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+/* --- Responsive --- */
+@media (max-width: 650px) {
+    .buttons-section {
+        justify-content: space-around;
+    }
+
+    .volume-ctrl {
+        border-left: none;
+    }
+
+    #tiempo {
+        font-size: 0.75rem;
+    }
+}
