@@ -333,7 +333,6 @@
     cursor: pointer;
     padding: 0.3rem 0.6rem;
     border-radius: 999px;
-    transition: background 150ms ease, transform 150ms ease;
 }
 
 .comment-like-btn:hover,

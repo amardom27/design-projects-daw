@@ -29,17 +29,23 @@
             <a href="#" class="btn-style-2 transition">Registrarse</a>
         </div>
 
-        <form action="" method="post">
-            <input type="text" name="query" id="query" placeholder="Buscar un sitio...">
-            <button class="search-btn">
-                <svg class="pos-center" id="lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        <form role="search" action="" method="get" class="search-form">
+            <label for="query" class="visually-hidden">
+                Buscar actividades o lugares
+            </label>
+            <div class="search-field">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                     <path d="M21 21l-6 -6" />
                 </svg>
-            </button>
+                <input type="search" name="query" id="query" placeholder="Buscar un sitio..." autocomplete="off">
+                <button type="button" class="clear-btn" aria-label="Borrar búsqueda">
+                    ✕
+                </button>
+            </div>
         </form>
     </header>
 
@@ -49,12 +55,12 @@
         <section class="container bg-primary text-white">
             <header class="section-header-1">
                 <h1>Términos y Condiciones</h1>
-                <p>Actualizado por última vez: Enero 2026</p>
+                <p>Actualizado por última vez: <time datetime="2026-01-01">Enero 2026</time></p>
             </header>
         </section>
 
-        <section class="px-4">
-            <h2>1. Introducción</h2>
+        <section class="px-4" aria-labelledby="intro-heading">
+            <h2 id="intro-heading">1. Introducción</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur. Aliquam duis venenatis volutpat id. Ipsum eu vulputate
                 ullamcorper at. Pellentesque vitae amet bibendum auctor egestas platea quisque mauris. Elementum at enim
@@ -62,8 +68,8 @@
             </p>
         </section>
 
-        <section class="px-4">
-            <h2>2. Información</h2>
+        <section class="px-4" aria-labelledby="info-heading">
+            <h2 id="info-heading">2. Información</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur. Aliquam duis venenatis volutpat id. Ipsum eu vulputate
                 ullamcorper at. Pellentesque vitae amet bibendum auctor egestas platea quisque mauris. Elementum at enim
@@ -71,8 +77,8 @@
             </p>
         </section>
 
-        <section class="px-4">
-            <h2>3. Cómo usamos los datos</h2>
+        <section class="px-4" aria-labelledby="data-heading">
+            <h2 id="data-heading">3. Cómo usamos los datos</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur. Aliquam duis venenatis volutpat id. Ipsum eu vulputate
                 ullamcorper at. Pellentesque vitae amet bibendum auctor egestas platea quisque mauris. Elementum at enim
