@@ -30,65 +30,99 @@
             <a href="#" class="btn-style-2 transition">Registrarse</a>
         </div>
 
-        <form action="" method="post">
-            <input type="text" name="query" id="query" placeholder="Buscar un sitio...">
-            <button class="search-btn">
-                <svg class="pos-center" id="lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        <form role="search" action="" method="get" class="search-form">
+            <label for="query" class="visually-hidden">
+                Buscar actividades o lugares
+            </label>
+            <div class="search-field">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                     <path d="M21 21l-6 -6" />
                 </svg>
-            </button>
+                <input type="search" name="query" id="query" placeholder="Buscar un sitio..." autocomplete="off">
+                <button type="button" class="clear-btn" aria-label="Borrar búsqueda">
+                    ✕
+                </button>
+            </div>
         </form>
     </header>
 
     <hr>
 
     <main>
-        <h1 class="text-2xl mt-4 pl-4">Lugares</h1>
+        <section class="container-first flex flex-wrap gap-4" aria-labelledby="places-heading">
+            <h2 id="places-heading">Lugares destacados</h2>
 
-        <section class="container-first flex flex-wrap gap-8">
-            <article class="card">
-                <a href="#">
-                    <div class="card-categ bubble-categ-1">Museos</div>
-                    <div class="card-img">
-                        <img src="../../assets/images/mirador1.webp" alt="Mirador del Carmen">
-                    </div>
-                    <h2>Expositorio El Mirador del Carmen</h2>
-                </a>
-            </article>
+            <ul class="card-list">
+                <li>
+                    <article class="card">
+                        <a href="/mirador-del-carmen">
+                            <figure>
+                                <img src="../../assets/images/mirador1.webp"
+                                    alt="Vista exterior del Expositorio El Mirador del Carmen">
+                                <figcaption>
+                                    <p class="card-category bubble-categ-1">Museos</p>
+                                    <h3>Expositorio El Mirador del Carmen</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                </li>
 
-            <article class="card">
-                <a href="#">
-                    <div class="card-categ bubble-categ-1">Playas</div>
-                    <img src="../../assets/images/playa-cristo1.webp" alt="Mirador del Carmen">
-                    <h2>Playa del Cristo</h2>
-                </a>
-            </article>
+                <li>
+                    <article class="card">
+                        <a href="/playa-del-cristo">
+                            <figure>
+                                <img src="../../assets/images/playa-cristo1.webp"
+                                    alt="Playa del Cristo con arena y mar tranquilo">
+                                <figcaption>
+                                    <p class="card-category bubble-categ-1">Playas</p>
+                                    <h3>Playa del Cristo</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                </li>
 
-            <article class="card">
-                <a href="#">
-                    <div class="card-categ bubble-categ-1">Lugares de Interés</div>
-                    <img src="../../assets/images/senda-litoral1.webp" alt="Senda Litoral">
-                    <h2>Senda Litoral</h2>
-                </a>
-            </article>
+                <li>
+                    <article class="card">
+                        <a href="/senda-litoral">
+                            <figure>
+                                <img src="../../assets/images/senda-litoral1.webp"
+                                    alt="Sendero costero de la Senda Litoral junto al mar">
+                                <figcaption>
+                                    <p class="card-category bubble-categ-1">Lugares de interés</p>
+                                    <h3>Senda Litoral</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                </li>
 
-            <article class="card">
-                <a href="#">
-                    <div class="card-categ bubble-categ-1">Museos</div>
-                    <img src="../../assets/images/tejerinas1.webp" alt="Mirador del Carmen">
-                    <h2>Espacio Expositivo Casa de las Tejerinas</h2>
-                </a>
-            </article>
+                <li>
+                    <article class="card">
+                        <a href="/casa-tejerinas">
+                            <figure>
+                                <img src="../../assets/images/tejerinas1.webp"
+                                    alt="Fachada del Espacio Expositivo Casa de las Tejerinas">
+                                <figcaption>
+                                    <p class="card-category bubble-categ-1">Museos</p>
+                                    <h3>Espacio Expositivo Casa de las Tejerinas</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <nav>
-            <h3>Nuestras categorías</h3>
+            <h2 class="text-xl">Nuestras categorías</h2>
             <a href="#">Todas</a>
             <a href="#">Playas</a>
             <a href="#">Museos</a>
@@ -101,6 +135,16 @@
             <p><a href="#">Política de privacidad</a> -- <a href="#">Términos y Condiciones</a></p>
         </div>
     </footer>
+
+    <script>
+        const input = document.getElementById('query');
+        const clearBtn = document.querySelector('.clear-btn');
+
+        clearBtn.addEventListener('click', () => {
+            input.value = '';
+            input.focus();
+        });
+    </script>
 </body>
 
 </html>

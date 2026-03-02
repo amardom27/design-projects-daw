@@ -56,50 +56,74 @@
 }
 
 /* Carta de lugar (lugares) */
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* adapt spacing as needed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .card {
-    padding: .4rem;
+    padding: 0.4rem;
+    flex: 1 1 30rem;
+    max-width: 30rem;
 }
 
 .card a {
-    outline: 2px solid var(--mid-gray);
-    border-radius: .4rem;
-    cursor: pointer;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-
-    flex: 1 1 auto;
-    max-width: 30rem;
-    position: relative;
-
     display: flex;
     flex-direction: column;
     height: 100%;
+    cursor: pointer;
+    position: relative;
+    outline: 2px solid var(--mid-gray);
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card a:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.card a:hover,
+.card a:focus {
     outline-color: var(--secondary);
     color: var(--secondary);
 }
 
-.card a img {
+.card figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.card figure img {
     width: 100%;
     aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: .4rem .4rem 0 0;
+    display: block;
+    object-fit: cover;
 }
 
-.card a h2 {
-    font-size: medium;
+.card figcaption {
     padding: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.card-categ {
+.card h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.card-category {
     position: absolute;
-    top: .4rem;
-    right: .4rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    pointer-events: none;
 }
 
 /* Bolas de categorías */
