@@ -33,21 +33,30 @@
             <a href="#" class="btn-style-2 transition">Registrarse</a>
         </nav>
 
-        <form action="" method="post">
+        <form role="search" action="" method="get" class="search-form">
+
             <label for="query" class="visually-hidden">
                 Buscar actividades o lugares
             </label>
-            <input type="text" name="query" id="query" placeholder="Buscar un sitio...">
-            <button type="submit" class="search-btn">
-                <span class="visually-hidden">Buscar</span>
-                <svg class="abs-center" id="lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+
+            <div class="search-field">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                     <path d="M21 21l-6 -6" />
                 </svg>
-            </button>
+
+                <input type="search" name="query" id="query" placeholder="Buscar un sitio..." autocomplete="off">
+
+                <button type="button" class="clear-btn" aria-label="Borrar búsqueda">
+                    ✕
+                </button>
+
+                </>
+
         </form>
     </header>
 
@@ -176,13 +185,29 @@
         <section id="newsletter">
             <h2>Únete a nuestra newsletter</h2>
             <p>Encuentra las últimas novedades antes que nadie</p>
-            <form action="" method="post">
-                <label for="newsletter-email" class="visually-hidden">
-                    Introduce tu correo electrónico
-                </label>
-                <input type="email" name="newsletter-email" id="newsletter-email" autocomplete="email"
-                    placeholder="Introduce tu email..." required>
-                <button type="submit">Subscribirse</button>
+            <form id="newsletter-form" action="index.html" method="get" novalidate aria-labelledby="newsletter-title">
+
+                <div class="form-field">
+                    <label for="newsletter-email">
+                        Correo electrónico
+                    </label>
+
+                    <input type="email" name="email" id="newsletter-email" placeholder="Introduce tu email..."
+                        autocomplete="email" required aria-describedby="email-help email-error">
+
+                    <p id="email-error" class="error-text" role="alert">
+                        Introduce un email válido.
+                    </p>
+                </div>
+
+                <button type="submit" class="transition">
+                    <span class="btn-text">Suscribirse</span>
+                    <span class="btn-loading visually-hidden">Enviando…</span>
+                </button>
+
+                <p class="success-message" role="status">
+                    ¡Gracias por suscribirte!
+                </p>
             </form>
         </section>
     </main>
@@ -202,6 +227,16 @@
             <p><a href="#">Política de privacidad</a> -- <a href="#">Términos y Condiciones</a></p>
         </div>
     </footer>
+
+    <script>
+        const input = document.getElementById('query');
+        const clearBtn = document.querySelector('.clear-btn');
+
+        clearBtn.addEventListener('click', () => {
+            input.value = '';
+            input.focus();
+        });
+    </script>
 </body>
 
 </html>

@@ -141,52 +141,105 @@
 #newsletter form {
     width: 100%;
     display: flex;
-    border: 2px solid var(--mid-gray);
-    border-radius: .4rem;
-    background-color: var(--bg-color);
-    font-size: .9rem;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-#newsletter form:focus-within {
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#newsletter label {
+    font-size: .9rem;
+    margin-bottom: .2rem;
+}
+
+#newsletter input {
+    padding: .6rem .4rem;
+    border-radius: .4rem;
+    border: 2px solid var(--bg-color);
+    font: inherit;
+    transition: border .2s ease;
+}
+
+#newsletter input:focus {
+    outline: none;
     border-color: var(--secondary);
 }
 
-#newsletter form input {
-    display: inline-block;
-    flex-basis: 80%;
-    padding: .6rem .4rem;
-    border-radius: .4rem 0 0 .4rem;
-    border: none;
-    font: inherit;
+#newsletter input:not(:placeholder-shown):invalid {
+    border-color: var(--error);
 }
 
-#newsletter form input:focus {
-    outline: none;
+#newsletter input:not(:placeholder-shown):valid {
+    border-color: var(--success);
 }
 
-#newsletter form button {
+#newsletter input:valid {
+    border-color: var(--success);
+}
+
+.help-text {
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.error-text {
+    font-size: .8rem;
+    color: #ffdddd;
+    display: block;
+    visibility: hidden;
+    margin-top: .3rem;
+}
+
+#newsletter input:invalid:focus~.error-text {
+    visibility: visible;
+}
+
+#newsletter button {
     background-color: var(--secondary);
-    flex-basis: 20%;
-    position: relative;
-    border-radius: 0 .2rem .2rem 0;
+    color: var(--bg-color);
+    padding: .6rem;
+    border-radius: .4rem;
     border: none;
     cursor: pointer;
-    color: var(--bg-color);
-    padding: .4rem;
+    font-weight: 600;
 }
 
-/* Keyboard focus visibility */
-#newsletter form button:focus-visible {
-    outline: 2px solid inherit;
+#newsletter button:hover {
+    background-color: var(--bg-color);
+    color: var(--primary);
+}
+
+#newsletter button:focus-visible {
+    outline: 2px solid var(--bg-color);
     outline-offset: 2px;
 }
 
+#newsletter form.loading .btn-text {
+    display: none;
+}
 
-/* -------------------------
-   Placeholder readability
--------------------------- */
+#newsletter form.loading .btn-loading {
+    display: inline;
+}
 
-#newsletter form input::placeholder {
-    color: var(--dark-gray);
-    opacity: .8;
+#newsletter form.loading button {
+    cursor: wait;
+    opacity: .7;
+}
+
+.success-message {
+    display: none;
+    font-size: .9rem;
+}
+
+#newsletter form.success .success-message {
+    display: block;
+}
+
+#newsletter form.success input,
+#newsletter form.success button {
+    display: none;
 }
