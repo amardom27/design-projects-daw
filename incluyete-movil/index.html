@@ -13,7 +13,7 @@
 
 <body>
     <header class="page-header">
-        <div class="first-row">
+        <nav class="first-row">
             <button id="menu-toggle" aria-label="Abrir menú">
                 <svg id="burguer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -31,11 +31,15 @@
 
             <a href="#" class="btn-style-1 transition">Iniciar Sesión</a>
             <a href="#" class="btn-style-2 transition">Registrarse</a>
-        </div>
+        </nav>
 
         <form action="" method="post">
+            <label for="query" class="visually-hidden">
+                Buscar actividades o lugares
+            </label>
             <input type="text" name="query" id="query" placeholder="Buscar un sitio...">
-            <button class="search-btn">
+            <button type="submit" class="search-btn">
+                <span class="visually-hidden">Buscar</span>
                 <svg class="abs-center" id="lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
@@ -173,8 +177,12 @@
             <h2>Únete a nuestra newsletter</h2>
             <p>Encuentra las últimas novedades antes que nadie</p>
             <form action="" method="post">
-                <input type="email" name="email" id="email" placeholder="Introduce tu email...">
-                <button>Subscribirse</button>
+                <label for="newsletter-email" class="visually-hidden">
+                    Introduce tu correo electrónico
+                </label>
+                <input type="email" name="newsletter-email" id="newsletter-email" autocomplete="email"
+                    placeholder="Introduce tu email..." required>
+                <button type="submit">Subscribirse</button>
             </form>
         </section>
     </main>

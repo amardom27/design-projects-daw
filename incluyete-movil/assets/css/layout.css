@@ -6,13 +6,13 @@ header.page-header {
     gap: 1rem;
 }
 
-header.page-header div.first-row {
+header.page-header .first-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header.page-header div.first-row .logo-cont {
+header.page-header .first-row .logo-cont {
     display: block;
     width: 6rem;
     height: 4rem;
@@ -31,8 +31,13 @@ header.page-header div.first-row .logo-cont {
 /* Buscador del Header */
 header.page-header form {
     display: flex;
-    border: 1px solid var(--dark-gray);
+    border: 2px solid var(--mid-gray);
     border-radius: .4rem;
+    background: #fff;
+}
+
+header.page-header form:focus-within {
+    border-color: var(--secondary);
 }
 
 header.page-header form:has(input:focus) {
@@ -45,15 +50,37 @@ header.page-header form input {
     padding: .6rem .4rem;
     border-radius: .4rem 0 0 .4rem;
     border: none;
+    font: inherit;
+}
+
+header.page-header form input:focus {
+    outline: none;
 }
 
 header.page-header form button.search-btn {
     background-color: var(--secondary);
     flex-basis: 20%;
     position: relative;
-    border-radius: 0 .4rem .4rem 0;
+    border-radius: 0 .2rem .2rem 0;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.page-header form button.search-btn:focus-visible {
+    outline: 2px solid inherit;
+    outline-offset: 2px;
+}
+
+header.page-header form button.search-btn svg {
+    pointer-events: none;
+}
+
+header.page-header form input::placeholder {
+    color: var(--dark-gray);
+    opacity: .8;
 }
 
 /* Footer */

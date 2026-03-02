@@ -141,8 +141,14 @@
 #newsletter form {
     width: 100%;
     display: flex;
-    border: 1px solid var(--dark-gray);
+    border: 2px solid var(--mid-gray);
     border-radius: .4rem;
+    background-color: var(--bg-color);
+    font-size: .9rem;
+}
+
+#newsletter form:focus-within {
+    border-color: var(--secondary);
 }
 
 #newsletter form input {
@@ -151,15 +157,36 @@
     padding: .6rem .4rem;
     border-radius: .4rem 0 0 .4rem;
     border: none;
+    font: inherit;
+}
+
+#newsletter form input:focus {
+    outline: none;
 }
 
 #newsletter form button {
     background-color: var(--secondary);
     flex-basis: 20%;
     position: relative;
-    border-radius: 0 .4rem .4rem 0;
+    border-radius: 0 .2rem .2rem 0;
     border: none;
     cursor: pointer;
     color: var(--bg-color);
     padding: .4rem;
+}
+
+/* Keyboard focus visibility */
+#newsletter form button:focus-visible {
+    outline: 2px solid inherit;
+    outline-offset: 2px;
+}
+
+
+/* -------------------------
+   Placeholder readability
+-------------------------- */
+
+#newsletter form input::placeholder {
+    color: var(--dark-gray);
+    opacity: .8;
 }
