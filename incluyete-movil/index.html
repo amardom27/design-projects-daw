@@ -14,16 +14,19 @@
 <body>
     <header class="page-header">
         <div class="first-row">
-            <svg id="burguer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 6l16 0" />
-                <path d="M4 12l16 0" />
-                <path d="M4 18l16 0" />
-            </svg>
+            <button id="menu-toggle" aria-label="Abrir menú">
+                <svg id="burguer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </button>
+
             <a class="logo-cont" href="#">
-                <img id="logo" src="./assets/images/oficial.webp" alt="Logo">
+                <img id="logo" src="./assets/images/oficial.webp" alt="Inclúyete - Inicio">
             </a>
 
             <a href="#" class="btn-style-1 transition">Iniciar Sesión</a>
@@ -57,8 +60,7 @@
                 inclusivas. Desde visitas a museos accesibles hasta increíbles playas adaptadas, encuentra tu próxima
                 aventura.
             </p>
-            <button class="btn-style-3 transition">Actividades</button>
-
+            <a href="/pages/lugares/index.html" class="btn-style-3 transition text-center">Actividades</a>
         </section>
 
         <section id="why-here">
@@ -66,8 +68,9 @@
             <p>
                 Tenemos todo lo que necesitas para descubrir las mejores actividades inclusivas en Estepona.
             </p>
-            <div>
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <article>
+                <svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_157_19)">
                         <path d="M6.66667 6.66669H16.6667V16.6667H6.66667V6.66669Z" stroke="#045284" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -85,12 +88,13 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <p>Fácil de buscar</p>
+                <h3>Fácil de buscar</h3>
                 <p>Explora cientos de lugares clasificados por categorías.</p>
-            </div>
+            </article>
 
-            <div>
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <article>
+                <svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_157_892)">
                         <path
                             d="M13.7383 12.2333L3.105 13.775L2.91667 13.8133C2.63156 13.889 2.37166 14.039 2.16349 14.248C1.95531 14.457 1.80634 14.7175 1.73177 15.0029C1.6572 15.2883 1.65971 15.5883 1.73904 15.8724C1.81838 16.1566 1.97169 16.4145 2.18333 16.62L9.88667 24.1183L8.07 34.71L8.04833 34.8933C8.03088 35.1882 8.09211 35.4824 8.22575 35.7458C8.35939 36.0093 8.56064 36.2324 8.80889 36.3925C9.05714 36.5526 9.34348 36.6438 9.63858 36.6568C9.93368 36.6699 10.2269 36.6042 10.4883 36.4667L19.9983 31.4667L29.4867 36.4667L29.6533 36.5433C29.9284 36.6517 30.2274 36.6849 30.5196 36.6396C30.8118 36.5943 31.0866 36.472 31.316 36.2854C31.5453 36.0988 31.7209 35.8546 31.8247 35.5777C31.9285 35.3009 31.9568 35.0014 31.9067 34.71L30.0883 24.1183L37.795 16.6183L37.925 16.4767C38.1107 16.2479 38.2325 15.9741 38.2779 15.683C38.3233 15.3919 38.2907 15.094 38.1835 14.8195C38.0763 14.5451 37.8982 14.304 37.6675 14.1208C37.4367 13.9377 37.1616 13.8189 36.87 13.7767L26.2367 12.2333L21.4833 2.59999C21.3458 2.32088 21.1329 2.08585 20.8687 1.9215C20.6044 1.75715 20.2995 1.67004 19.9883 1.67004C19.6772 1.67004 19.3722 1.75715 19.108 1.9215C18.8438 2.08585 18.6309 2.32088 18.4933 2.59999L13.7383 12.2333Z"
@@ -102,9 +106,9 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <p>Calidad asegurada</p>
+                <h3>Calidad asegurada</h3>
                 <p>Nuestras actividades están verficadas por nuestros colaboradores.</p>
-            </div>
+            </article>
         </section>
 
         <section id="categories">
@@ -113,8 +117,8 @@
 
             <ul class="categ-cont">
                 <li>
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+                    <a href="#">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
                             <g clip-path="url(#clip0_157_436)">
                                 <path
                                     d="M29.255 27.917a12.5 12.5 0 0 0-17.677 0M30 6.34A10 10 0 0 0 16.34 10l17.32 10A10 10 0 0 0 30 6.34Z" />
@@ -126,8 +130,8 @@
                     </a>
                 </li>
                 <li>
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+                    <a href="#">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
                             <g clip-path="url(#clip0_157_655)">
                                 <path
                                     d="M5 35h30M5 16.667h30M8.333 10 20 5l11.667 5M6.667 16.667V35M33.333 16.667V35M13.333 23.333v5M20 23.333v5M26.667 23.333v5" />
@@ -137,8 +141,8 @@
                     </a>
                 </li>
                 <li>
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+                    <a href="#">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
                             <g clip-path="url(#clip0_157_132)">
                                 <path d="M25 18.333a5 5 0 1 0-6.513 4.767" />
                                 <path
@@ -151,8 +155,8 @@
                     </a>
                 </li>
                 <li>
-                    <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+                    <a href="#">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
                             <g clip-path="url(#clip0_157_755)">
                                 <path d="M5 35v-6.667A6.667 6.667 0 1 1 11.667 35H5Z" />
                                 <path d="M35 5a26.667 26.667 0 0 0-21.333 17M35 5a26.668 26.668 0 0 1-17 21.333" />
@@ -177,7 +181,7 @@
 
     <footer>
         <nav>
-            <h3>Nuestras categorías</h3>
+            <h2 class="text-xl">Nuestras categorías</h2>
             <a href="#">Todas</a>
             <a href="#">Playas</a>
             <a href="#">Museos</a>

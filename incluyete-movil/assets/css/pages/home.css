@@ -1,7 +1,7 @@
 /* Sección Bienvenida */
 #welcome {
     padding-top: .8rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
     padding: 2rem var(--space-4);
 }
 
-#why-here div {
+#why-here article {
     background-color: var(--bg-color);
     color: var(--text);
     border-radius: .4rem;
@@ -65,7 +65,7 @@
     gap: .6rem;
 }
 
-#why-here div>p:not(:last-child) {
+#why-here article>p:not(:last-child) {
     font-weight: 600;
     font-size: 1.2rem;
 }
