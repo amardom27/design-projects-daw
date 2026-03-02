@@ -150,12 +150,14 @@
     overflow: hidden;
 }
 
-.hero-img {
+.hero-lugar figure.hero-img {
     width: 100%;
     height: 100%;
+    margin: 0;
+    position: relative;
 }
 
-.hero-img img {
+.hero-lugar figure.hero-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -170,21 +172,28 @@
     z-index: 1;
 }
 
-.hero-lugar div.hero-title {
+.hero-lugar .hero-title {
     position: absolute;
     z-index: 2;
     bottom: 1rem;
     left: 1rem;
-}
-
-.hero-lugar div.hero-title h1 {
-    margin-bottom: 1rem;
-    color: var(--bg-color);
-}
-
-.hero-lugar div.hero-title div {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-lugar .hero-title h1 {
+    margin: 0 0 0.5rem 0;
+    color: var(--bg-color);
+    font-size: 2rem;
+    /* adjust as needed */
+    line-height: 1.2;
+}
+
+.hero-lugar .hero-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 /* Título con borde debajo */
@@ -231,15 +240,11 @@
 }
 
 /* Nuevo comentario */
-.comment-box {
-    width: 100%;
-    margin-top: 1rem;
-}
-
 .comment-form {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
 }
 
 .comment-textarea {
@@ -263,18 +268,18 @@
 
 .comment-hint {
     font-size: 0.8rem;
+    color: var(--dark-gray);
 }
 
-/* Comentario */
 .comment {
-    padding-bottom: .8rem;
+    padding: 0.8rem 0;
     border-bottom: 1px solid var(--light-gray);
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
 }
 
-.comment-header {
+.comment header.comment-header {
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -289,21 +294,23 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark-gray);
 }
 
 .comment-meta {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .comment-author {
     font-weight: 600;
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
 }
 
 .comment-time {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: var(--dark-gray);
 }
 
@@ -312,7 +319,7 @@
     line-height: 1.4;
 }
 
-.comment-footer {
+.comment div.comment-footer {
     display: flex;
     align-items: center;
 }
@@ -326,19 +333,24 @@
     cursor: pointer;
     padding: 0.3rem 0.6rem;
     border-radius: 999px;
+    transition: background 150ms ease, transform 150ms ease;
 }
 
-.comment-like-btn:hover {
+.comment-like-btn:hover,
+.comment-like-btn:focus {
     background: var(--light-gray);
+    outline: 2px solid var(--secondary);
 }
 
 .comment-like-icon {
     width: 18px;
     height: 18px;
     color: var(--dark-gray);
+    transition: color 150ms ease, transform 150ms ease;
 }
 
-.comment-like-btn:hover .comment-like-icon {
+.comment-like-btn:hover .comment-like-icon,
+.comment-like-btn:focus .comment-like-icon {
     color: var(--error);
     transform: scale(1.1);
 }
@@ -348,7 +360,10 @@
     color: #666;
 }
 
-/* Header de privacidad y terminos */
+.comment+.comment {
+    margin-top: 1rem;
+}
+
 header.section-header-1 h1 {
     font-size: 1.4rem;
 }

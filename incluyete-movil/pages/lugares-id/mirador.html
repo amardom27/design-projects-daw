@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mirador Del Carmen</title>
+    <link rel="shortcut icon" href="../../assets/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/components.css">
     <link rel="stylesheet" href="../../assets/css/layout.css">
     <link rel="stylesheet" href="../../assets/css/utilities.css">
@@ -30,41 +31,50 @@
             <a href="#" class="btn-style-2 transition">Registrarse</a>
         </div>
 
-        <form action="" method="post">
-            <input type="text" name="query" id="query" placeholder="Buscar un sitio...">
-            <button class="search-btn">
-                <svg class="pos-center" id="lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        <form role="search" action="" method="get" class="search-form">
+            <label for="query" class="visually-hidden">
+                Buscar actividades o lugares
+            </label>
+            <div class="search-field">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                     <path d="M21 21l-6 -6" />
                 </svg>
-            </button>
+                <input type="search" name="query" id="query" placeholder="Buscar un sitio..." autocomplete="off">
+                <button type="button" class="clear-btn" aria-label="Borrar búsqueda">
+                    ✕
+                </button>
+            </div>
         </form>
     </header>
 
     <hr>
 
     <main>
-        <section class="pt-4">
-            <div class="hero-lugar">
-                <div class="hero-img">
-                    <img src="../../assets/images/mirador1.webp" alt="Mirador del Carmen">
-                </div>
+        <section class="pt-4" aria-labelledby="hero-heading">
+            <header class="hero-lugar">
+                <figure class="hero-img">
+                    <img src="../../assets/images/mirador1.webp"
+                        alt="Vista del Espacio Expositivo El Mirador del Carmen">
+                    <figcaption class="sr-only">Espacio Expositivo El Mirador del Carmen, Museos, Lugar Accesible
+                    </figcaption>
+                </figure>
                 <div class="hero-title">
-                    <h1>Espacio Expositivo El Mirador del Carmen</h1>
-                    <div>
-                        <div class="bubble-categ-2">Museos</div>
-                        <div class="bubble-categ-1">Lugar Accesible</div>
+                    <h1 id="hero-heading">Espacio Expositivo El Mirador del Carmen</h1>
+                    <div class="hero-categories">
+                        <span class="bubble-categ-2" aria-label="Categoría: Museos">Museos</span>
+                        <span class="bubble-categ-1" aria-label="Lugar accesible">Lugar Accesible</span>
                     </div>
                 </div>
-            </div>
+            </header>
         </section>
 
-        <section class="container">
+        <section class="container" aria-labelledby="lorem-heading">
             <div class="bg-mid-gray py-8 px-4 rounded">
-                <h2 class="mb-4">Lorem Ipsum</h2>
+                <h2 id="lorem-heading" class="mb-4">Lorem Ipsum</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur. Feugiat eget suspendisse urna diam est euismod. A arcu neque
                     iaculis commodo dui ac vulputate tellus. Orci non eget vitae tempor eget dignissim fusce eleifend.
@@ -74,91 +84,95 @@
             </div>
         </section>
 
-        <section class="container">
-            <h2 class="title-1">Galería de Imágenes</h2>
+        <section class="container" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading" class="title-1">Galería de Imágenes</h2>
 
             <div class="flex flex-col gap-4">
-                <div class="img-box">
-                    <img src="../../assets/images/mirador1.webp" alt="Mirador del Carmen 2">
-                </div>
-                <div class="img-box">
-                    <img src="../../assets/images/mirador2.webp" alt="Mirador del Carmen 2">
-                </div>
-                <div class="img-box">
-                    <img src="../../assets/images/mirador3.webp" alt="Mirador del Carmen 3">
-                </div>
+                <figure class="img-box">
+                    <img src="../../assets/images/mirador1.webp"
+                        alt="Vista del Expositorio El Mirador del Carmen desde la terraza">
+                </figure>
+                <figure class="img-box">
+                    <img src="../../assets/images/mirador2.webp"
+                        alt="Interior del Expositorio El Mirador del Carmen mostrando exposiciones">
+                </figure>
+                <figure class="img-box">
+                    <img src="../../assets/images/mirador3.webp"
+                        alt="Vista panorámica del Expositorio El Mirador del Carmen y jardines">
+                </figure>
             </div>
         </section>
 
-        <section class="container">
-            <h2 class="title-1">Información práctica</h2>
+        <section class="container" aria-labelledby="info-heading">
+            <h2 id="info-heading" class="title-1">Información práctica</h2>
             <div class="flex flex-col gap-4">
-                <div class="info-1">
+                <article class="info-1">
                     <h3>Horario y Precios</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur. Feugiat eget.
                     </p>
-                </div>
-                <div class="info-1">
+                </article>
+                <article class="info-1">
                     <h3>Ubicación</h3>
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet consectetur. Feugiat eget.
                     </p>
-                    <button class="btn-style-2 transition">Ver en el mapa</button>
-                </div>
-                <div class="info-1">
+                    <button class="btn-style-2 transition" aria-label="Ver ubicación en el mapa">Ver en el mapa</button>
+                </article>
+                <article class="info-1">
                     <h3>Contacto</h3>
                     <ul>
                         <li>
-                            <a href="#" class="link-1">Sitio web oficial</a>
+                            <a href="https://example.com" class="link-1">Sitio web oficial</a>
                         </li>
                         <li>
-                            <a href="#" class="link-1">Facebook</a>
+                            <a href="https://facebook.com" class="link-1">Facebook</a>
                         </li>
                     </ul>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="container">
-            <h2 class="title-1">Mapa</h2>
-            <div>
-                <img class="w-full aspect-video" src="../../assets/images/map.webp" alt="Mapa">
-            </div>
+        <section class="container" aria-labelledby="map-heading">
+            <h2 id="map-heading" class="title-1">Mapa</h2>
+            <figure>
+                <img class="w-full aspect-video" src="../../assets/images/map.webp"
+                    alt="Mapa de ubicación del Expositorio El Mirador del Carmen">
+                <figcaption class="sr-only">Ubicación geográfica del Expositorio El Mirador del Carmen</figcaption>
+            </figure>
         </section>
 
-        <section class="container">
-            <h2 class="title-1">Comentarios</h2>
+        <section class="container" aria-labelledby="comments-heading">
+            <h2 id="comments-heading" class="title-1">Comentarios</h2>
+
             <form action="" method="post" class="comment-form">
                 <label for="comentario">Escribe tu comentario</label>
-                <div>
-                    <textarea name="comentario" id="comentario" rows="3" placeholder="Escribe un comentario..." required
-                        maxlength="500" class="comment-textarea"></textarea>
-                </div>
+                <textarea name="comentario" id="comentario" rows="3" placeholder="Escribe un comentario..." required
+                    maxlength="500" class="comment-textarea" aria-describedby="comment-hint"></textarea>
 
                 <div class="comment-actions">
-                    <span class="comment-hint">Máx. 500 caracteres</span>
+                    <span id="comment-hint" class="comment-hint">Máx. 500 caracteres</span>
                     <button type="submit" class="btn-style-2 transition">Publicar</button>
                 </div>
             </form>
 
             <div class="flex flex-col gap-4 mt-8">
-                <div class="comment">
-                    <div class="comment-header">
-                        <div class="comment-avatar">L</div>
+                <article class="comment">
+                    <header class="comment-header">
+                        <div class="comment-avatar" aria-label="Avatar de Lorem Ipsum">L</div>
                         <div class="comment-meta">
                             <p class="comment-author">Lorem Ipsum</p>
-                            <p class="comment-time">Hace 24 minutos</p>
+                            <time class="comment-time" datetime="2026-03-02T11:30:00">Hace 24 minutos</time>
                         </div>
-                    </div>
+                    </header>
 
-                    <div class="comment-body">
+                    <p class="comment-body">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis dui ut orci
                         euismod venenatis. Aenean nec nulla sit amet risus aliquam sodales vitae quis ex.
-                    </div>
+                    </p>
 
                     <div class="comment-footer">
-                        <button class="comment-like-btn transition">
+                        <button class="comment-like-btn transition" aria-label="Me gusta este comentario">
                             <svg viewBox="0 0 24 24" fill="none" class="comment-like-icon transition">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2"
@@ -167,41 +181,40 @@
                             <span class="comment-like-count">17</span>
                         </button>
                     </div>
-                </div>
-                <div class="flex flex-col gap-4 mt-8">
-                    <div class="comment">
-                        <div class="comment-header">
-                            <div class="comment-avatar">L</div>
-                            <div class="comment-meta">
-                                <p class="comment-author">Lorem Ipsum</p>
-                                <p class="comment-time">Hace 24 minutos</p>
-                            </div>
-                        </div>
+                </article>
 
-                        <div class="comment-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis dui ut orci
-                            euismod venenatis. Aenean nec nulla sit amet risus aliquam sodales vitae quis ex.
+                <article class="comment">
+                    <header class="comment-header">
+                        <div class="comment-avatar" aria-label="Avatar de Lorem Ipsum">L</div>
+                        <div class="comment-meta">
+                            <p class="comment-author">Lorem Ipsum</p>
+                            <time class="comment-time" datetime="2026-03-02T11:30:00">Hace 24 minutos</time>
                         </div>
+                    </header>
 
-                        <div class="comment-footer">
-                            <button class="comment-like-btn transition">
-                                <svg viewBox="0 0 24 24" fill="none" class="comment-like-icon transition">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M19.5 12.572 12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572" />
-                                </svg>
-                                <span class="comment-like-count">17</span>
-                            </button>
-                        </div>
+                    <p class="comment-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis dui ut orci
+                        euismod venenatis. Aenean nec nulla sit amet risus aliquam sodales vitae quis ex.
+                    </p>
+
+                    <div class="comment-footer">
+                        <button class="comment-like-btn transition" aria-label="Me gusta este comentario">
+                            <svg viewBox="0 0 24 24" fill="none" class="comment-like-icon transition">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19.5 12.572 12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572" />
+                            </svg>
+                            <span class="comment-like-count">17</span>
+                        </button>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer>
         <nav>
-            <h3>Nuestras categorías</h3>
+            <h2 class="text-xl">Nuestras categorías</h2>
             <a href="#">Todas</a>
             <a href="#">Playas</a>
             <a href="#">Museos</a>
@@ -214,6 +227,16 @@
             <p><a href="#">Política de privacidad</a> -- <a href="#">Términos y Condiciones</a></p>
         </div>
     </footer>
+
+    <script>
+        const input = document.getElementById('query');
+        const clearBtn = document.querySelector('.clear-btn');
+
+        clearBtn.addEventListener('click', () => {
+            input.value = '';
+            input.focus();
+        });
+    </script>
 </body>
 
 </html>
