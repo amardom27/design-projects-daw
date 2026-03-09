@@ -81,15 +81,6 @@ audio.addEventListener("loadedmetadata", function () {
     tiempoActual.textContent = "0:00";
 });
 
-
-// Click en la barra para saltar
-barraTotal.addEventListener("click", function (e) {
-    var rect = barraTotal.getBoundingClientRect();
-    var clickX = e.clientX - rect.left;
-    var porcentaje = clickX / rect.width;
-    audio.currentTime = porcentaje * audio.duration;
-});
-
 // Glow de la barra
 audio.addEventListener("play", () => {
     vinilo.classList.add("playing");
