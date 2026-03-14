@@ -12,9 +12,11 @@
 </head>
 
 <body>
+    <input type="checkbox" name="menu-control" id="menu-control" hidden>
+
     <header class="page-header">
         <nav class="first-row">
-            <button id="menu-toggle" aria-label="Abrir menú">
+            <label for="menu-control" aria-label="Abrir menú">
                 <svg id="burguer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
@@ -23,7 +25,7 @@
                     <path d="M4 12l16 0" />
                     <path d="M4 18l16 0" />
                 </svg>
-            </button>
+            </label>
 
             <a class="logo-cont" href="#">
                 <img id="logo" src="./assets/images/oficial.webp" alt="Inclúyete - Inicio">
@@ -40,7 +42,6 @@
             </label>
 
             <div class="search-field">
-
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
@@ -54,11 +55,112 @@
                 <button type="button" class="clear-btn" aria-label="Borrar búsqueda">
                     ✕
                 </button>
-
             </div>
-
         </form>
     </header>
+
+    <div id="menu-panel" class="panel panel-izquierda">
+        <div class="panel-cabecera">
+            <h3>Menú</h3>
+
+            <label for="menu-control" class="panel-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                </svg>
+            </label>
+        </div>
+
+        <h4 class="font-semibold">Categorías</h4>
+        <nav class="panel-contenido">
+            <a href="#">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-layout-grid">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                        <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                        <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                        <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                    </svg>
+                    Todas
+                </span>
+                <svg id="circulo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                </svg>
+            </a>
+            <a href="#">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-building-bank">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21l18 0" />
+                        <path d="M3 10l18 0" />
+                        <path d="M5 6l7 -3l7 3" />
+                        <path d="M4 10l0 11" />
+                        <path d="M20 10l0 11" />
+                        <path d="M8 14l0 3" />
+                        <path d="M12 14l0 3" />
+                        <path d="M16 14l0 3" />
+                    </svg>
+                    Museos
+                </span>
+                <svg id="circulo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                </svg>
+            </a>
+            <a href="#">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin-star">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 11a3 3 0 1 0 -3.908 2.86" />
+                        <path d="M11.059 21.25a2 2 0 0 1 -.472 -.35l-4.244 -4.243a8 8 0 1 1 13.646 -6.079" />
+                        <path
+                            d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138" />
+                    </svg>
+                    Lugares de Interés
+                </span>
+                <svg id="circulo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                </svg>
+            </a>
+            <a href="#">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-beach">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M17.553 16.75a7.5 7.5 0 0 0 -10.606 0" />
+                        <path d="M18 3.804a6 6 0 0 0 -8.196 2.196l10.392 6a6 6 0 0 0 -2.196 -8.196" />
+                        <path
+                            d="M16.732 10c1.658 -2.87 2.225 -5.644 1.268 -6.196c-.957 -.552 -3.075 1.326 -4.732 4.196" />
+                        <path d="M15 9l-3 5.196" />
+                        <path
+                            d="M3 19.25a2.4 2.4 0 0 1 1 -.25a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 1 .25" />
+                    </svg>
+                    Playas
+                </span>
+                <svg id="circulo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-circle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+                </svg>
+            </a>
+        </nav>
+    </div>
 
     <hr>
 
@@ -69,8 +171,10 @@
                 <h1 class="pos-center">Descrubre Actividades <span>Muy Cerca de Ti</span></h1>
             </div>
             <p>
-                Conéctate con Estepona y la comunidad a través de actividades, lugares y experiencias locales totalmente
-                inclusivas. Desde visitas a museos accesibles hasta increíbles playas adaptadas, encuentra tu próxima
+                Conéctate con Estepona y la comunidad a través de actividades, lugares y experiencias locales
+                totalmente
+                inclusivas. Desde visitas a museos accesibles hasta increíbles playas adaptadas, encuentra tu
+                próxima
                 aventura.
             </p>
             <a href="/pages/lugares/index.html" class="btn-style-3 transition text-center">Actividades</a>
