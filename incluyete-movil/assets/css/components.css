@@ -491,11 +491,43 @@ header.section-header-1 h1 {
     transform: translateX(-100%);
 }
 
+.panel-derecha {
+    right: 0;
+    transform: translateX(100%);
+}
+
 #menu-control:checked~#menu-panel {
     transform: translate(0);
 }
 
-#menu-control:checked~.panel-fondo {
+#ajustes-control:checked~#menu-ajustes {
+    transform: translateX(0);
+}
+
+#menu-control:checked~.fondo-menu,
+#ajustes-control:checked~.fondo-ajustes {
     opacity: 1;
     pointer-events: auto;
+}
+
+.icono-cont {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: var(--bg-color);
+
+    border: 1px solid var(--bg-color);
+    cursor: pointer;
+    border-radius: 40rem;
+    padding: .4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icono-acces {
+    width: 3rem;
+    height: 3rem;
 }
