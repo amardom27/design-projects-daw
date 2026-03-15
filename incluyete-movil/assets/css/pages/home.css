@@ -134,10 +134,6 @@
     color: var(--bg-color);
 }
 
-#newsletter p {
-    text-align: center;
-}
-
 #newsletter form {
     width: 100%;
     display: flex;

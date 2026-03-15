@@ -405,6 +405,7 @@ header.section-header-1 h1 {
     text-decoration: underline;
 }
 
+/* Paneles de los menús que aparecen en pantalla */
 .panel {
     position: fixed;
     top: 0;
