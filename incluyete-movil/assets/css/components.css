@@ -435,7 +435,7 @@ header.section-header-1 h1 {
     gap: 1rem;
 }
 
-.panel-contenido a {
+.panel-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -446,18 +446,22 @@ header.section-header-1 h1 {
     transition-duration: 150ms;
 }
 
-.panel-contenido a:hover {
+.panel-item:hover {
     background-color: var(--primary);
     color: var(--bg-color);
 }
 
-.panel-contenido a span {
+.panel-item:hover #circulo {
+    visibility: visible;
+}
+
+.panel-item span {
     display: flex;
     align-items: center;
     gap: .6rem;
 }
 
-.panel-contenido a span svg {
+.panel-item span svg {
     width: 1.6rem;
     height: 1.6rem;
 }
@@ -480,6 +484,7 @@ header.section-header-1 h1 {
 #circulo {
     width: .6rem;
     height: .6rem;
+    visibility: hidden;
 }
 
 .panel-cerrar {
