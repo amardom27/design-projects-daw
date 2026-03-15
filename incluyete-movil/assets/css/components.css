@@ -436,6 +436,10 @@ header.section-header-1 h1 {
     gap: 1rem;
 }
 
+.panel-contenido>legend {
+    margin-bottom: 1rem;
+}
+
 .panel-item {
     display: flex;
     justify-content: space-between;
@@ -544,6 +548,8 @@ input[type="radio"]:checked+.panel-item .circulo {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 10;
 }
 
 #icono-acces {
