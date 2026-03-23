@@ -1,47 +1,56 @@
 /* Sección Bienvenida */
 #welcome {
-    padding-top: .8rem;
+    padding-top: 0.8rem;
     padding-bottom: 2rem;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 1.4rem;
 }
 
-#welcome div.img-cont {
+#welcome .img-cont {
     position: relative;
-    height: 14.375rem;
-}
-
-#welcome div.img-cont img {
     width: 100%;
+    height: 14.375rem;
+    overflow: hidden;
 }
 
-#welcome div.img-cont::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+#welcome .img-cont img {
+    display: block;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
 
-#welcome div.img-cont h1 {
-    font-size: 1.6rem;
-    width: 80%;
+#welcome .img-cont::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+#welcome .img-cont h1 {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     text-align: center;
+    font-size: 1.8rem;
     color: var(--bg-color);
+    z-index: 2;
+    margin: 0;
 }
 
-#welcome div.img-cont h1 span {
+#welcome .img-cont h1 span {
     color: var(--secondary-bright);
+    display: block;
 }
 
 #welcome>p {
     padding: 0 var(--space-4);
+    text-align: center;
+    max-width: 80ch;
 }
 
 /* Por qué buscar aquí */
