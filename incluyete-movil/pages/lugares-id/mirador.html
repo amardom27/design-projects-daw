@@ -17,7 +17,7 @@
     <input type="checkbox" name="ajustes-control" id="ajustes-control" hidden>
 
     <header class="page-header header-w-fluid">
-        <nav class="first-row">
+        <div class="header-brand">
             <label for="menu-control" aria-label="Abrir menú">
                 <svg id="burguer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -32,15 +32,9 @@
             <a class="logo-cont" href="#">
                 <img id="logo" src="../../assets/images/oficial.webp" alt="Inclúyete - Inicio">
             </a>
-
-            <div>
-                <a href="#" class="btn-style-1 transition mr-4">Iniciar Sesión</a>
-                <a href="#" class="btn-style-2 transition">Registrarse</a>
-            </div>
-        </nav>
+        </div>
 
         <form role="search" action="" method="get" class="search-form">
-
             <label for="query" class="visually-hidden">
                 Buscar actividades o lugares
             </label>
@@ -56,11 +50,14 @@
 
                 <input type="search" name="query" id="query" placeholder="Buscar un sitio..." autocomplete="off">
 
-                <button type="button" class="clear-btn" aria-label="Borrar búsqueda">
-                    ✕
-                </button>
+                <button type="button" class="clear-btn" aria-label="Borrar búsqueda">✕</button>
             </div>
         </form>
+
+        <div class="header-actions">
+            <a href="#" class="btn-style-1 transition">Iniciar Sesión</a>
+            <a href="#" class="btn-style-2 transition">Registrarse</a>
+        </div>
     </header>
 
     <label for="menu-control" class="panel-fondo fondo-menu" aria-hidden="true"></label>
