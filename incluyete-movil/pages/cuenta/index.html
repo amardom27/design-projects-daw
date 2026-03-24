@@ -8,59 +8,63 @@
     <link rel="stylesheet" href="../../assets/css/components.css">
     <link rel="stylesheet" href="../../assets/css/layout.css">
     <link rel="stylesheet" href="../../assets/css/utilities.css">
-    <link rel="stylesheet" href="../../assets/css/pages/login.css">
+    <link rel="stylesheet" href="../../assets/css/pages/cuenta.css">
 </head>
 
 <body>
-    <main class="flex flex-col justify-center items-center gap-4 px-8 py-8">
-        <div class="logo-cont">
-            <img class="rounded" src="../../assets/images/oficial.webp" alt="Logo">
-        </div>
-
-        <!-- <div class="w-80">
-            <img class="w-full rounded" src="../../assets/images/calle-san-miguel.webp" alt="Calle San Miguel">
-        </div> -->
-
-        <h1>Bienvenido</h1>
-        <p class="text-center">
-            Introduzca sus credenciales para acceder a su cuenta
-        </p>
-
-        <form action="" method="post" class="w-full flex flex-col gap-4">
-            <div class="input-style">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Paco Pepe">
-                <span>* Campo obligatorio</span>
+    <main class="auth-page">
+        <section class="auth-card auth-card--register">
+            <div class="auth-brand">
+                <div class="logo-cont">
+                    <img class="rounded" src="../../assets/images/oficial.webp" alt="Logo">
+                </div>
             </div>
 
-            <div class="input-style">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="ejemplo@email.com">
-                <span>* Campo obligatorio</span>
-            </div>
+            <div class="auth-content">
+                <h1>Bienvenido</h1>
+                <p class="auth-text">
+                    Introduzca sus credenciales para acceder a su cuenta
+                </p>
 
-            <div class="input-style">
-                <label for="clave">Contraseña</label>
-                <input type="password" name="clave" id="clave">
-                <span>* Campo obligatorio</span>
-            </div>
+                <form action="" method="post" class="auth-form">
+                    <div class="input-style">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Paco Pepe" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
 
-            <div class="input-style">
-                <label for="repetida">Repetir Contraseña</label>
-                <input type="password" name="repetida" id="repetida">
-                <span>* Campo obligatorio</span>
-            </div>
+                    <div class="input-style">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="ejemplo@email.com" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
 
-            <div class="checkbox-style">
-                <input type="checkbox" name="recordar" id="recordar">
-                <label class="cursor-pointer" for="recordar">Acepto los Términos y Condiciones</label>
+                    <div class="input-style">
+                        <label for="clave">Contraseña</label>
+                        <input type="password" name="clave" id="clave" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
+
+                    <div class="input-style">
+                        <label for="repetida">Repetir Contraseña</label>
+                        <input type="password" name="repetida" id="repetida" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
+
+                    <div class="checkbox-style">
+                        <input type="checkbox" name="recordar" id="recordar" required>
+                        <label class="cursor-pointer" for="recordar">Acepto los Términos y Condiciones</label>
+                    </div>
+
+                    <button type="submit" class="btn-style-2 transition">Entrar</button>
+
+                    <p class="auth-switch">
+                        ¿Ya tienes una cuenta?
+                        <a href="../login/index.html" class="link-style-2 transition">Iniciar Sesión</a>
+                    </p>
+                </form>
             </div>
-            <button class="btn-style-2 transition my-4">Entrar</button>
-            <p>
-                Ya tienes una cuenta ?
-                <a href="../login/index.html" class="link-style-2 transition">Iniciar Sesión</a>
-            </p>
-        </form>
+        </section>
     </main>
 </body>
 
