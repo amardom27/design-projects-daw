@@ -57,19 +57,17 @@
 
 /* Carta de lugar (lugares) */
 .card-list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    /* adapt spacing as needed */
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .card {
     padding: 0.4rem;
     flex: 1 1 30rem;
-    max-width: 30rem;
+    max-width: 26rem;
 }
 
 .card a {

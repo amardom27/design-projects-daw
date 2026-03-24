@@ -1,3 +1,38 @@
 section h1 {
     font-size: larger;
 }
+
+section {
+    padding: 1rem;
+}
+
+/* lg */
+@media (min-width: 992px) {
+    section {
+        padding-inline: 2rem;
+    }
+}
+
+/* xl */
+@media (min-width: 1200px) {}
+
+
+
+/*
+EJEMPLO DE BREAKPOINTS
+*/
+
+/* sm */
+@media (min-width: 575px) {}
+
+/* md */
+@media (min-width: 768px) {}
+
+/* lg */
+@media (min-width: 992px) {}
+
+/* xl */
+@media (min-width: 1200px) {}
+
+/* xxl */
+@media (min-width: 1400px) {}
