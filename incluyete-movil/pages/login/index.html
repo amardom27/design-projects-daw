@@ -12,41 +12,51 @@
 </head>
 
 <body>
-    <main class="flex flex-col justify-center items-center gap-4 px-8 py-8">
-        <div class="logo-cont">
-            <img class="rounded" src="../../assets/images/oficial.webp" alt="Logo">
-        </div>
-
-        <div class="w-80">
-            <img class="w-full rounded" src="../../assets/images/calle-san-miguel.webp" alt="Calle San Miguel">
-        </div>
-
-        <h1>Bienvenido</h1>
-        <p class="text-center">
-            Introduzca sus credenciales para acceder a su cuenta
-        </p>
-
-        <form action="" method="post" class="w-full flex flex-col gap-4">
-            <div class="input-style">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="ejemplo@email.com">
-                <span>* Campo obligatorio</span>
+    <main class="login-page">
+        <section class="login-card">
+            <div class="login-brand">
+                <div class="logo-cont">
+                    <img class="rounded" src="../../assets/images/oficial.webp" alt="Logo">
+                </div>
             </div>
-            <div class="input-style">
-                <label for="clave">Contraseña</label>
-                <input type="password" name="clave" id="clave">
-                <span>* Campo obligatorio</span>
+
+            <div class="login-media">
+                <img src="../../assets/images/calle-san-miguel.webp" alt="Calle San Miguel">
             </div>
-            <div class="checkbox-style">
-                <input type="checkbox" name="recordar" id="recordar">
-                <label class="cursor-pointer" for="recordar">Recordar dispositivo por 30 días</label>
+
+            <div class="login-content">
+                <h1>Bienvenido</h1>
+                <p class="login-text">
+                    Introduzca sus credenciales para acceder a su cuenta
+                </p>
+
+                <form action="" method="post" class="login-form">
+                    <div class="input-style">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="ejemplo@email.com" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
+
+                    <div class="input-style">
+                        <label for="clave">Contraseña</label>
+                        <input type="password" name="clave" id="clave" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
+
+                    <div class="checkbox-style">
+                        <input type="checkbox" name="recordar" id="recordar">
+                        <label class="cursor-pointer" for="recordar">Recordar dispositivo por 30 días</label>
+                    </div>
+
+                    <button type="submit" class="btn-style-2 transition">Entrar</button>
+
+                    <p class="login-register">
+                        No tienes cuenta?
+                        <a href="../cuenta/index.html" class="link-style-2 transition">Crear cuenta</a>
+                    </p>
+                </form>
             </div>
-            <button class="btn-style-2 transition my-4">Entrar</button>
-            <p>
-                No tienes cuenta ?
-                <a href="../cuenta/index.html" class="link-style-2 transition">Crear Cuenta</a>
-            </p>
-        </form>
+        </section>
     </main>
 </body>
 

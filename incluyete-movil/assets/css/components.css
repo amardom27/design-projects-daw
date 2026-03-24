@@ -379,8 +379,23 @@ header.section-header-1 h1 {
 }
 
 .input-style input {
-    padding: .6rem .8rem;
+    width: 100%;
+    padding: .65rem .8rem;
+    border: 2px solid var(--mid-gray);
     border-radius: .4rem;
+    background: #fff;
+    font: inherit;
+    transition: border .2s ease;
+}
+
+.input-style input:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.input-style input::placeholder {
+    color: var(--dark-gray);
+    opacity: .8;
 }
 
 .input-style span {
