@@ -401,13 +401,20 @@ header.section-header-1 h1 {
 .input-style span {
     font-size: .8rem;
     color: var(--error);
-    visibility: hidden;
+    display: none;
 }
 
-.input-style input:invalid+span {
-    visibility: visible;
+.input-style input:focus:invalid,
+.input-style input:not(:placeholder-shown):invalid {
+    border-color: var(--error);
 }
 
+.input-style input:focus:invalid+span,
+.input-style input:not(:placeholder-shown):invalid+span {
+    display: block;
+}
+
+/* link 2 */
 .link-style-2 {
     color: var(--primary);
     font-weight: bold;
