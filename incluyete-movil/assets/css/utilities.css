@@ -1396,7 +1396,7 @@ fieldset {
 /* lg */
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        max-width: 60rem;
     }
 
     .form-w-fluid {
@@ -1411,7 +1411,7 @@ fieldset {
 /* xl */
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 58rem;
     }
 
     .form-w-fluid {
@@ -1426,7 +1426,7 @@ fieldset {
 /* xxl */
 @media (min-width: 1400px) {
     .container {
-        max-width: 1320px;
+        max-width: 64rem;
     }
 
     .form-w-fluid {
