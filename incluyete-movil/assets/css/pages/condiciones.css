@@ -1,0 +1,50 @@
+.container {
+    padding-inline: 0;
+}
+
+.content {
+    padding-block: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: .6rem;
+}
+
+/* sm */
+@media (min-width: 575px) {
+    .content {
+        max-width: 540px;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .content {
+        max-width: 720px;
+    }
+}
+
+/* lg */
+@media (min-width: 992px) {
+    .content {
+        max-width: 60rem;
+    }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+    .content {
+        max-width: 58rem;
+    }
+}
+
+/* xxl */
+@media (min-width: 1400px) {
+    .content {
+        max-width: 64rem;
+    }
+}
