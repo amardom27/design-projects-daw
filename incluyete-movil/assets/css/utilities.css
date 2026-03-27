@@ -1341,6 +1341,11 @@ fieldset {
     border: 0;
 }
 
+/* Main que ocupe el espacio */
+.main-h-fluid {
+    min-height: calc(100vh - 26.5rem);
+}
+
 /* Seccion */
 .container {
     width: 100%;

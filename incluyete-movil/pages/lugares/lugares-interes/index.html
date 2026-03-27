@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inclúyete</title>
-    <link rel="stylesheet" href="./assets/css/components.css">
-    <link rel="stylesheet" href="./assets/css/layout.css">
-    <link rel="stylesheet" href="./assets/css/utilities.css">
-    <link rel="stylesheet" href="./assets/css/pages/home.css">
-    <link rel="shortcut icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
+    <title>Lugares de Interés</title>
+    <link rel="shortcut icon" href="../../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/components.css">
+    <link rel="stylesheet" href="../../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../../assets/css/utilities.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/lugares.css">
 </head>
 
 <body>
@@ -29,8 +29,8 @@
                 </svg>
             </label>
 
-            <a class="logo-cont" href="./index.html">
-                <img id="logo" src="./assets/images/oficial.webp" alt="Inclúyete - Inicio">
+            <a class="logo-cont" href="../../../index.html">
+                <img id="logo" src="../../../assets/images/oficial.webp" alt="Inclúyete - Inicio">
             </a>
         </div>
 
@@ -55,8 +55,8 @@
         </form>
 
         <div class="header-actions">
-            <a href="./pages/login/index.html" class="btn-style-1 transition">Iniciar Sesión</a>
-            <a href="./pages/cuenta/index.html" class="btn-style-2 transition">Registrarse</a>
+            <a href="../../login/index.html" class="btn-style-1 transition">Iniciar Sesión</a>
+            <a href="../../cuenta/index.html" class="btn-style-2 transition">Registrarse</a>
         </div>
     </header>
 
@@ -91,7 +91,7 @@
 
         <nav class="panel-contenido">
             <h4 class="font-semibold">Categorías</h4>
-            <a href="#" class="panel-item">
+            <a href="../index.html" class="panel-item">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -110,7 +110,7 @@
                     <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
                 </svg>
             </a>
-            <a href="#" class="panel-item">
+            <a href="./index.html" class="panel-item">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -133,7 +133,7 @@
                     <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
                 </svg>
             </a>
-            <a href="#" class="panel-item">
+            <a href="../lugares-interes/index.html" class="panel-item">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -152,7 +152,7 @@
                     <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
                 </svg>
             </a>
-            <a href="#" class="panel-item">
+            <a href="../playas/index.html" class="panel-item">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -198,7 +198,7 @@
             <input type="radio" name="idioma" id="es" value="es" checked hidden>
             <label for="es" class="panel-item panel-item-selected">
                 <span>
-                    <img class="flag-img" src="./assets/images/flags/es-round.png" alt="Spain flag">
+                    <img class="flag-img" src="../../../assets/images/flags/es-round.png" alt="Spain flag">
                     Español
                 </span>
                 <svg class="circulo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -211,7 +211,7 @@
             <input type="radio" name="idioma" id="en" value="es" hidden>
             <label for="en" class="panel-item">
                 <span>
-                    <img class="flag-img" src="./assets/images/flags/en-round.png" alt="UK flag">
+                    <img class="flag-img" src="../../../assets/images/flags/en-round.png" alt="UK flag">
                     Inglés
                 </span>
                 <svg class="circulo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -290,187 +290,47 @@
 
     <hr>
 
-    <main>
-        <section id="welcome">
-            <div class="img-cont">
-                <img src="./assets/images/calle-san-miguel.webp" alt="Calle San Miguel">
-                <h1 class="pos-center">Descrubre Actividades <span>Muy Cerca de Ti</span></h1>
-            </div>
-            <p>
-                Conéctate con Estepona y la comunidad a través de actividades, lugares y experiencias locales
-                totalmente
-                inclusivas. Desde visitas a museos accesibles hasta increíbles playas adaptadas, encuentra tu
-                próxima
-                aventura.
-            </p>
-            <a href="/pages/lugares/index.html" class="btn-style-3 transition text-center btn-w-fluid">Actividades</a>
-        </section>
+    <main class="main-h-fluid">
+        <section class="lugares" aria-labelledby="places-heading">
+            <h2 id="places-heading" class="mb-8 mt-4">Museos</h2>
 
-        <section id="why-here">
-            <div class="container flex flex-col gap-8 items-center">
-                <h2>¿ Por qué buscar aquí ?</h2>
-                <p>
-                    Tenemos todo lo que necesitas para descubrir las mejores actividades inclusivas en Estepona.
-                </p>
+            <ul class="card-list">
 
-                <div class="why-here-articles">
-
-                    <article>
-                        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_157_19)">
-                                <path d="M6.66667 6.66669H16.6667V16.6667H6.66667V6.66669Z" stroke="#045284"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M23.3333 6.66669H33.3333V16.6667H23.3333V6.66669Z" stroke="#045284"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M6.66667 23.3333H16.6667V33.3333H6.66667V23.3333Z" stroke="#045284"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M23.3333 28.3333C23.3333 29.6594 23.8601 30.9312 24.7978 31.8688C25.7355 32.8065 27.0073 33.3333 28.3333 33.3333C29.6594 33.3333 30.9312 32.8065 31.8689 31.8688C32.8066 30.9312 33.3333 29.6594 33.3333 28.3333C33.3333 27.0072 32.8066 25.7355 31.8689 24.7978C30.9312 23.8601 29.6594 23.3333 28.3333 23.3333C27.0073 23.3333 25.7355 23.8601 24.7978 24.7978C23.8601 25.7355 23.3333 27.0072 23.3333 28.3333Z"
-                                    stroke="#045284" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_157_19">
-                                    <rect width="40" height="40" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <h3>Fácil de buscar</h3>
-                        <p>Explora cientos de lugares clasificados por categorías.</p>
+                <li>
+                    <article class="card">
+                        <a href="/senda-litoral" class="transition">
+                            <figure>
+                                <img src="../../../assets/images/senda-litoral1.webp"
+                                    alt="Sendero costero de la Senda Litoral junto al mar">
+                                <figcaption>
+                                    <p class="card-category bubble-categ-1">Lugares de interés</p>
+                                    <h3>Senda Litoral</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
                     </article>
+                </li>
 
-                    <article>
-                        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_157_892)">
-                                <path
-                                    d="M13.7383 12.2333L3.105 13.775L2.91667 13.8133C2.63156 13.889 2.37166 14.039 2.16349 14.248C1.95531 14.457 1.80634 14.7175 1.73177 15.0029C1.6572 15.2883 1.65971 15.5883 1.73904 15.8724C1.81838 16.1566 1.97169 16.4145 2.18333 16.62L9.88667 24.1183L8.07 34.71L8.04833 34.8933C8.03088 35.1882 8.09211 35.4824 8.22575 35.7458C8.35939 36.0093 8.56064 36.2324 8.80889 36.3925C9.05714 36.5526 9.34348 36.6438 9.63858 36.6568C9.93368 36.6699 10.2269 36.6042 10.4883 36.4667L19.9983 31.4667L29.4867 36.4667L29.6533 36.5433C29.9284 36.6517 30.2274 36.6849 30.5196 36.6396C30.8118 36.5943 31.0866 36.472 31.316 36.2854C31.5453 36.0988 31.7209 35.8546 31.8247 35.5777C31.9285 35.3009 31.9568 35.0014 31.9067 34.71L30.0883 24.1183L37.795 16.6183L37.925 16.4767C38.1107 16.2479 38.2325 15.9741 38.2779 15.683C38.3233 15.3919 38.2907 15.094 38.1835 14.8195C38.0763 14.5451 37.8982 14.304 37.6675 14.1208C37.4367 13.9377 37.1616 13.8189 36.87 13.7767L26.2367 12.2333L21.4833 2.59999C21.3458 2.32088 21.1329 2.08585 20.8687 1.9215C20.6044 1.75715 20.2995 1.67004 19.9883 1.67004C19.6772 1.67004 19.3722 1.75715 19.108 1.9215C18.8438 2.08585 18.6309 2.32088 18.4933 2.59999L13.7383 12.2333Z"
-                                    fill="#045284" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_157_892">
-                                    <rect width="40" height="40" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <h3>Calidad asegurada</h3>
-                        <p>Nuestras actividades están verficadas por nuestros colaboradores.</p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="categories">
-            <div class="container flex flex-col items-center gap-8 mx-auto">
-                <h2>Explora las categorías</h2>
-                <p>Encuentra lugares que te interesan</p>
-
-                <ul class="categ-cont">
-                    <li>
-                        <a href="#">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
-                                <g clip-path="url(#clip0_157_436)">
-                                    <path
-                                        d="M29.255 27.917a12.5 12.5 0 0 0-17.677 0M30 6.34A10 10 0 0 0 16.34 10l17.32 10A10 10 0 0 0 30 6.34Z" />
-                                    <path
-                                        d="M27.887 16.667C30.65 11.883 31.595 7.26 30 6.34c-1.595-.92-5.125 2.21-7.887 6.993M25 15l-5 8.66M5 32.083a4.002 4.002 0 0 1 1.667-.416A4.001 4.001 0 0 1 10 33.333 4 4 0 0 0 13.333 35a4.001 4.001 0 0 0 3.334-1.667A3.998 3.998 0 0 1 20 31.667a4 4 0 0 1 3.333 1.666A4.001 4.001 0 0 0 26.667 35 4.001 4.001 0 0 0 30 33.333a4 4 0 0 1 3.333-1.666c.58.016 1.148.158 1.667.416" />
-                                </g>
-                            </svg>
-                            <p>Playas</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
-                                <g clip-path="url(#clip0_157_655)">
-                                    <path
-                                        d="M5 35h30M5 16.667h30M8.333 10 20 5l11.667 5M6.667 16.667V35M33.333 16.667V35M13.333 23.333v5M20 23.333v5M26.667 23.333v5" />
-                                </g>
-                            </svg>
-                            <p>Museos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
-                                <g clip-path="url(#clip0_157_132)">
-                                    <path d="M25 18.333a5 5 0 1 0-6.513 4.767" />
-                                    <path
-                                        d="M18.432 35.417a3.333 3.333 0 0 1-.787-.584l-7.073-7.071A13.332 13.332 0 1 1 33.315 17.63" />
-                                    <path
-                                        d="m29.667 34.695-3.62 1.897a.654.654 0 0 1-.947-.684l.692-4.018-2.929-2.845a.648.648 0 0 1 .362-1.108l4.047-.587 1.81-3.655a.652.652 0 0 1 1.17 0l1.81 3.655 4.046.587a.65.65 0 0 1 .362 1.108l-2.928 2.845.69 4.017a.65.65 0 0 1-.945.685l-3.62-1.897Z" />
-                                </g>
-                            </svg>
-                            <p>Lugares de Interés</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
-                                <g clip-path="url(#clip0_157_755)">
-                                    <path d="M5 35v-6.667A6.667 6.667 0 1 1 11.667 35H5Z" />
-                                    <path d="M35 5a26.667 26.667 0 0 0-21.333 17M35 5a26.668 26.668 0 0 1-17 21.333" />
-                                    <path d="M17.667 15A15 15 0 0 1 25 22.333" />
-                                </g>
-                            </svg>
-                            <p>Murales</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="newsletter">
-            <div class="container flex flex-col items-center gap-4">
-
-                <h2 class="text-center">Únete a nuestra newsletter</h2>
-                <p class="text-center">Encuentra las últimas novedades antes que nadie</p>
-
-                <form id="newsletter-form" class="w-full flex flex-col form-w-fluid gap-4" action="index.html"
-                    method="post" novalidate aria-labelledby="newsletter-title">
-
-                    <div class="form-field">
-                        <label for="newsletter-email">
-                            Correo electrónico
-                        </label>
-
-                        <input class="input-w-fluid" type="email" name="email" id="newsletter-email"
-                            placeholder="Introduce tu email..." autocomplete="email" required
-                            aria-describedby="email-help email-error">
-
-                        <p id="email-error" class="error-text" role="alert">
-                            Introduce un email válido.
-                        </p>
-                    </div>
-
-                    <button type="submit" class="transition">
-                        <span class="btn-text">Suscribirse</span>
-                        <span class="btn-loading visually-hidden">Enviando…</span>
-                    </button>
-
-                    <p class="success-message" role="status">
-                        ¡Gracias por suscribirte!
-                    </p>
-                </form>
-            </div>
+            </ul>
         </section>
     </main>
 
     <footer>
         <nav>
             <h2 class="text-xl">Nuestras categorías</h2>
-            <a href="#">Todas</a>
-            <a href="#">Playas</a>
-            <a href="#">Museos</a>
-            <a href="#">Lugares de Interés</a>
+            <a href="../index.html">Todas</a>
+            <a href="../playas/index.html">Playas</a>
+            <a href="../museos/index.html">Museos</a>
+            <a href="./index.html">Lugares de Interés</a>
             <a href="#">Murales</a>
         </nav>
+
         <hr>
+
         <div class="copyright">
             <p>© 2026 Inclúyete. All rights reserved.</p>
-            <p><a href="./pages/privacidad/index.html">Política de privacidad</a> -- <a
-                    href="./pages/condiciones/index.html">Términos y
+            <p><a href="../../privacidad/index.html">Política de privacidad</a> -- <a
+                    href="../../condiciones/index.html">Términos y
                     Condiciones</a></p>
         </div>
     </footer>

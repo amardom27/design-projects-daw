@@ -1,5 +1,6 @@
 /* Header */
 .page-header {
+    height: 6.25rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -161,6 +162,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Footer */
 footer {
+    height: 20rem;
     background-color: var(--light-gray);
     display: flex;
     flex-direction: column;
