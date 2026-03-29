@@ -401,7 +401,7 @@ header.section-header-1 h1 {
 .input-style span {
     font-size: .8rem;
     color: var(--error);
-    display: none;
+    visibility: hidden;
 }
 
 .input-style input:focus:invalid,
@@ -411,7 +411,7 @@ header.section-header-1 h1 {
 
 .input-style input:focus:invalid+span,
 .input-style input:not(:placeholder-shown):invalid+span {
-    display: block;
+    visibility: visible;
 }
 
 /* link 2 */
